@@ -13,16 +13,11 @@ void acs(unsigned int* met, int* sinput, int* soutput)
 	for(j=0; j< N; j++)
 	{
         temp = met[j]+sinput[j];
-        if (*soutput <= temp)
-        {
-            printf("Skip\n");
-        }
         if (temp < *soutput)
         {
             *soutput = temp;
-            printf("Hit! :");
         }
-		printf("%d\n", *soutput);
+        printf("met: %d, si: %d, so:%d\n", met[j], sinput[j], *soutput);
 	}
 }
 
@@ -41,15 +36,20 @@ int main()
 {
 	// variables a passer a ACS. Peuvent etres placees directement 
 	// en memoire dans l'assembleur
-    int si[N] = {0};
+    int si[N] = {0, 0, 0, 0};
     int so[N] = {0};
     unsigned int metriques[N][N] = {4, 3, 3, 2,   0, 3, 5, 4,   4, 3, 3, 2,   2, 5, 3, 2};
 	
 	// Execution - pour chaque code du message
-    CalculSurvivants( &metriques[0][0], &si[0], &so[0] );
-    
-    printf("si: %d, %d, %d, %d\n", si[0], si[1], si[2], si[3]);
-    printf("so: %d, %d, %d, %d\n", so[0], so[1], so[2], so[3]);
+	for (int i = 0; i < 4; i++)
+	{
+        CalculSurvivants( &metriques[0][0], &si[0], &so[0] );
+
+        printf("si: %d, %d, %d, %d\n", si[0], si[1], si[2], si[3]);
+        printf("so: %d, %d, %d, %d\n", so[0], so[1], so[2], so[3]);
+
+        memcpy(si, so, sizeof(si));
+    }
 			
     return 0;
 }

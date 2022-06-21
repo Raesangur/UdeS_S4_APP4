@@ -24,28 +24,126 @@ main:
     la      $t0     so
     lw      $a0     0($t0)
     syscall                             # print (met[0])
-    li      $a0     10
+    li      $a0     32
     li      $v0     11
-    syscall                             # print(\n)
-    li      $v0     1                   # print integer
+    syscall                             # print(" ")
+    li      $v0     1
     lw      $a0     4($t0)
     syscall                             # print (met[1])
-    li      $a0     10
+    li      $a0     32
     li      $v0     11
-    syscall                             # print(\n)
-    li      $v0     1                   # print integer
+    syscall                             # print(" ")
+    li      $v0     1
     lw      $a0     8($t0)
     syscall                             # print (met[2])
-    li      $a0     10
+    li      $a0     32
     li      $v0     11
-    syscall                             # print(\n)
-    li      $v0     1                   # print integer
+    syscall                             # print(" ")
+    li      $v0     1
     lw      $a0     12($t0)
-    syscall                             # print (met[3])
+    syscall                             # print (so[3])
+    li      $v0     11
+    li      $a0     10
+    syscall                             # print(\n)
+
+
+    # Avec la sortie précédente, le programme devrait retourner en sortie les valeurs 3, 2, 3, 4
+    # Chargement des params pour appel de fonction
+    la      $a0     met
+    la      $a1     si
+    la      $a2     so
+
+    # Chargement de l'entrée
+    li      $t0     2
+    sw      $t0     0($a1)
+    li      $t0     0
+    sw      $t0     4($a1)
+    li      $t0     2
+    sw      $t0     8($a1)
+    li      $t0     2
+    sw      $t0     12($a1)
+
+    jal     CalculSurvivant             # CalculSurvivant(met, si, so)
+
+    # Comparaison des donnees avec les donnees prevues
+    li      $v0     1                   # print integer
+    la      $t0     so
+    lw      $a0     0($t0)
+    syscall                             # print (so[0])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     4($t0)
+    syscall                             # print (so[1])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     8($t0)
+    syscall                             # print (so[2])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     12($t0)
+    syscall                             # print (so[3])
+    li      $v0     11
+    li      $a0     10
+    syscall                             # print(\n)
+    
+    # Avec la metrique decalee, le programme devrait retourner en sortie les valeurs 5, 3, 5, 5
+    # Chargement des params pour appel de fonction
+    la      $a0     met
+    la      $a1     si
+    la      $a2     so
+
+    # Chargement de l'entrée
+    li      $t0     3
+    sw      $t0     0($a1)
+    li      $t0     2
+    sw      $t0     4($a1)
+    li      $t0     3
+    sw      $t0     8($a1)
+    li      $t0     4
+    sw      $t0     12($a1)
+
+    jal     CalculSurvivant             # CalculSurvivant(met, si, so)
+
+    # Comparaison des donnees avec les donnees prevues
+    li      $v0     1                   # print integer
+    la      $t0     so
+    lw      $a0     0($t0)
+    syscall                             # print (so[0])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     4($t0)
+    syscall                             # print (so[1])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     8($t0)
+    syscall                             # print (so[2])
+    li      $a0     32
+    li      $v0     11
+    syscall                             # print(" ")
+    li      $v0     1
+    lw      $a0     12($t0)
+    syscall                             # print (so[3])
+    li      $v0     11
+    li      $a0     10
+    syscall                             # print(\n)
+        
 
     # exit(1)
     li      $v0     10
     syscall 
+
+
+
 
 
 # Utilise $t0, $t1, $t2, $t3
@@ -79,6 +177,7 @@ acs_end:
     
 
 
+# Utilise $t0, $t1, $t2, $t3, $t4, $t5 & $t6
 CalculSurvivant:
     move    $t4     $a0                 # met
     move    $t5     $a1                 # sInput
@@ -88,7 +187,7 @@ CalculSurvivant:
     li      $t1     0                   # uint32_t i = 0
 
 cs_loop:
-    bgtu    $t1     $t0     cs_end      # for i < N
+    bgeu    $t1     $t0     cs_end      # for i < N
 
     li      $t2     250                 # $t2 = 250
     sw      $t2     0($t6)              # sOutput[i] = $t2
