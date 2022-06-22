@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 22 11:21:55 2022
+# Process ID: 347144
+# Current directory: /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache
+# Command line: vivado
+# Log file: /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache/vivado.log
+# Journal file: /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache/mips32_labo2_cache.xpr
+launch_simulation
+open_wave_config /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache/mips_unicycle_tb_behav.wcfg
+source mips_unicycle_tb.tcl
+run 10 us
+run 10 us
+run 10 us
+close_sim
+launch_simulation
+open_wave_config /home/raesangur/github/UdeS_S4_APP4/laboratoire/mips32_labo2_cache/mips_unicycle_tb_behav.wcfg
+source mips_unicycle_tb.tcl
+run 10 us
+close_sim

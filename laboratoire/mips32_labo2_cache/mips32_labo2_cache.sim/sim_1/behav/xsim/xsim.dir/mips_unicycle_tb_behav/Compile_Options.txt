@@ -1,0 +1,1 @@
+-wto "3a4d8e80aec948c9a53b69d6ea6a5d47" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "mips_unicycle_tb_behav" "xil_defaultlib.mips_unicycle_tb" -log "elaborate.log" 

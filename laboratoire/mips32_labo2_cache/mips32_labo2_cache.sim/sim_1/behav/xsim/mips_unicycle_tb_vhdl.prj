@@ -1,0 +1,25 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/MIPS32_package.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/alu.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/BasicFifo.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/controleur_labo2.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/MemInstructions.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/MemDonnees.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/registres.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/mips_datapath_unicycle_labo2.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/Dram_ControleExterne.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/CachePourDram_labo2.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/Dram_ModeleControleurInterne.vhd" \
+"../../../../mips32_labo2_cache.srcs/sources_1/imports/mips_unicycle_top_labo2.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../mips32_labo2_cache.gen/sources_1/bd/design_1/sim/design_1.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../mips32_labo2_cache.srcs/sim_1/imports/verif/mips_unicycle_tb.vhd" \
+"../../../../mips32_labo2_cache.srcs/sim_1/imports/verif/monitor_unicycle_labo2.vhd" \
+"../../../../mips32_labo2_cache.srcs/sim_1/imports/verif/cache_testbench.vhd" \
+
+# Do not sort compile order
+nosort

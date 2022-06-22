@@ -53,7 +53,7 @@ main:
     la      $a1     si
     la      $a2     so
 
-    # Chargement de l'entrée
+    # Chargement entree
     li      $t0     2
     sw      $t0     0($a1)
     li      $t0     0
@@ -98,7 +98,7 @@ main:
     la      $a1     si
     la      $a2     so
 
-    # Chargement de l'entrée
+    # Chargement entree
     li      $t0     3
     sw      $t0     0($a1)
     li      $t0     2
