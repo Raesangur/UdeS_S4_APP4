@@ -14,3 +14,27 @@ open_project /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_r
 launch_simulation
 launch_simulation
 source mips_unicycle_tb.tcl
+close_sim
+launch_simulation
+source mips_unicycle_tb.tcl
+run 100 us
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg
+set_property xsim.view /home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg [get_filesets sim_1]
+restart
+run 100 us
+restart
+run 1 us
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg
+source mips_unicycle_tb.tcl
+restart
+run 1 us
+restart
+run 1 us
+restart
+run 1 us
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+close_sim

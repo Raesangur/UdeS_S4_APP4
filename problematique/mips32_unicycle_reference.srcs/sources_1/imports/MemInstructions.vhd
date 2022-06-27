@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Université de Sherbrooke 
---  Département de génie électrique et génie informatique
+--	Universitï¿½ de Sherbrooke 
+--  Dï¿½partement de gï¿½nie ï¿½lectrique et gï¿½nie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-André Tétrault
+--	Auteur: 		Marc-Andrï¿½ Tï¿½trault
 --					Daniel Dalle
---					Sébastien Roy
+--					Sï¿½bastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -28,13 +28,13 @@ end MemInstructions;
 architecture Behavioral of MemInstructions is
     signal ram_Instructions : RAM(0 to 255) := (
 ------------------------
--- Insérez votre code ici
+-- Insï¿½rez votre code ici
 ------------------------
 --  TestMirroir
-X"20100024",
+X"20100002", -- 20100024
 X"3c011001",
 X"00300821",
-X"8c240000",
+X"70300000", -- 8c240000  -  70240000  -  70300000
 X"0004c820",
 X"0c100007",
 X"08100015",
@@ -72,7 +72,7 @@ begin
     -- Conserver seulement l'indexage des mots de 32-bit/4 octets
     s_MemoryIndex <= to_integer(unsigned(i_addresse(9 downto 2)));
 
-    -- Si PC vaut moins de 127, présenter l'instruction en mémoire
+    -- Si PC vaut moins de 127, prï¿½senter l'instruction en mï¿½moire
     o_instruction <= ram_Instructions(s_MemoryIndex) when i_addresse(31 downto 10) = (X"00400" & "00")
                     -- Sinon, retourner l'instruction nop X"00000000": --> AND $zero, $zero, $zero  
                     else (others => '0');
