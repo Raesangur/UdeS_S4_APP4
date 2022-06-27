@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Jun 27 16:49:11 2022
-# Process ID: 52355
+# Start of session at: Mon Jun 27 16:30:05 2022
+# Process ID: 48986
 # Current directory: /home/raesangur/github/UdeS_S4_APP4/problematique
 # Command line: vivado
 # Log file: /home/raesangur/github/UdeS_S4_APP4/problematique/vivado.log
@@ -11,6 +11,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr
+synth_design -rtl -rtl_skip_mlo -name rtl_1
 launch_simulation
 launch_simulation
-source mips_unicycle_tb.tcl

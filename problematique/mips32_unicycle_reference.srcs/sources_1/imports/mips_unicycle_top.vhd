@@ -41,6 +41,7 @@ Port (
     o_AluFunct  : out std_ulogic_vector (3 downto 0);
     o_MemRead   : out std_ulogic;
     o_MemWrite  : out std_ulogic;
+    o_vect      : out std_ulogic;
     o_ALUSrc    : out std_ulogic;
     o_RegWrite  : out std_ulogic;
 	
@@ -68,6 +69,7 @@ Port (
 	i_ALUSrc      	: in std_ulogic;
 	i_MemRead 		: in std_ulogic;
 	i_MemWrite	  	: in std_ulogic;
+	i_vect          : in std_ulogic;
 
 	i_jump   	  	: in std_ulogic;
 	i_jump_register : in std_ulogic;
@@ -90,6 +92,7 @@ end component;
     signal s_ALUSrc         : std_ulogic;
 	signal s_MemRead	    : std_ulogic;
 	signal s_MemWrite	    : std_ulogic;
+	signal s_vect           : std_ulogic;
 	signal s_jump_register  : std_ulogic;
 	signal s_jump_link      : std_ulogic;
     signal s_jump           : std_ulogic;
@@ -118,6 +121,7 @@ Port map(
     o_AluFunct  	=> s_alu_funct,
     o_MemRead  		=> s_MemRead,
     o_MemWrite  	=> s_MemWrite,
+    o_vect          => s_vect,
     o_ALUSrc    	=> s_ALUSrc,
     o_RegWrite  	=> s_RegWrite,
 	
@@ -145,6 +149,7 @@ Port map(
 	i_ALUSrc      	=> s_ALUSrc,
 	i_MemRead 		=> s_MemRead,
 	i_MemWrite	  	=> s_MemWrite,
+	i_vect          => s_vect,
 	i_jump   	  	=> s_jump,
 	i_jump_register => s_jump_register,
 	i_jump_link   	=> s_jump_link,

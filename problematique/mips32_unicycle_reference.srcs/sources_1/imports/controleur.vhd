@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Université de Sherbrooke 
---  Département de génie électrique et génie informatique
+--	Universitï¿½ de Sherbrooke 
+--  Dï¿½partement de gï¿½nie ï¿½lectrique et gï¿½nie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-André Tétrault
+--	Auteur: 		Marc-Andrï¿½ Tï¿½trault
 --					Daniel Dalle
---					Sébastien Roy
+--					Sï¿½bastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -28,6 +28,7 @@ Port (
     o_AluFunct  	: out std_ulogic_vector (3 downto 0);
     o_MemRead   	: out std_ulogic;
     o_MemWrite  	: out std_ulogic;
+    o_vect          : out std_ulogic;
     o_ALUSrc    	: out std_ulogic;
     o_RegWrite  	: out std_ulogic;
 	
@@ -48,7 +49,7 @@ architecture Behavioral of controleur is
 
 begin
 
-    -- Contrôles pour les différents types d'instructions
+    -- Contrï¿½les pour les diffï¿½rents types d'instructions
     -- 
     process( i_Op, s_R_funct_decode )
     begin
@@ -73,6 +74,8 @@ begin
 				o_AluFunct <= ALU_ADD;
 			when OP_LW => 
 				o_AluFunct <= ALU_ADD;
+			when OP_LWV =>
+			    o_AluFunct <= ALU_ADD;
             -- when OP_??? =>   -- autres cas?
 			-- sinon
             when others =>
@@ -80,7 +83,7 @@ begin
         end case;
     end process; 
     
-    -- Commande à l'ALU pour les instructions "R"
+    -- Commande ï¿½ l'ALU pour les instructions "R"
     process(i_funct_field)
     begin
         case i_funct_field is
@@ -110,7 +113,7 @@ begin
                 s_R_funct_decode <= ALU_NULL; 
             when ALUF_MFLO => 
                 s_R_funct_decode <= ALU_NULL; 
-            -- à compléter au besoin avec d'autres instructions
+            -- ï¿½ complï¿½ter au besoin avec d'autres instructions
             when others =>
                 s_R_funct_decode <= ALU_NULL;
          end case;
@@ -123,6 +126,7 @@ begin
 								i_Op = OP_ORI or 
 								i_Op = OP_LUI or 
 								i_Op = OP_LW or 
+								i_Op = OP_LWV or
 								i_Op = OP_JAL
 						else '0';
 	
@@ -132,9 +136,10 @@ begin
 								i_Op = OP_BEQ
 						else '1';
 	o_Branch 		<= '1' when i_Op = OP_BEQ   else '0';
-	o_MemRead 		<= '1' when i_Op = OP_LW else '0';
+	o_MemRead 		<= '1' when i_Op = OP_LW or i_Op = OP_LWV else '0';
 	o_MemWrite 		<= '1' when i_Op = OP_SW else '0';
-	o_MemtoReg 		<= '1' when i_Op = OP_LW else '0';
+	o_MemtoReg 		<= '1' when i_Op = OP_LW or i_Op = OP_LWV else '0';
+	o_vect          <= '1' when i_Op = OP_LWV else '0';
 	o_SignExtend	<= '1' when i_OP = OP_ADDI or
 	                           i_OP = OP_BEQ 
 	                     else '0';

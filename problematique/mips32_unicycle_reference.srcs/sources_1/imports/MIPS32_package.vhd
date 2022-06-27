@@ -66,6 +66,7 @@ package MIPS32_package is
     constant OP_ORI   : std_ulogic_vector( 5 downto 0 ) := "001101";
     constant OP_LUI   : std_ulogic_vector( 5 downto 0 ) := "001111";
     constant OP_LW    : std_ulogic_vector( 5 downto 0 ) := "100011";
+    constant OP_LWV   : std_ulogic_vector( 5 downto 0 ) := "011100";
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
 	
 	
@@ -104,6 +105,7 @@ package MIPS32_package is
         sim_OP_ORI,
         sim_OP_LUI,
 		sim_OP_LW,
+		sim_OP_LWV,
 		sim_OP_SW,
 		sim_OP_SYSCALL,
         sim_OP_Undefined
@@ -206,6 +208,8 @@ begin
 			CurrentOp := sim_OP_ORI;
 		when OP_LW =>
 			CurrentOp := sim_OP_LW;
+		when OP_LWV =>
+		    CurrentOp := sim_OP_LWV;
 		when OP_SW =>
 			CurrentOp := sim_OP_SW;
 		when others =>
