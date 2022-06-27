@@ -1,0 +1,14 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/mips_unicycle_tb.vhd,1647461844,vhdl2008,,,,mips_unicycle_tb,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd,1656355001,vhdl2008,,,,monitor_unicycle,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MIPS32_package.vhd,1656354563,vhdl2008,/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/registres.vhd,,,mips32_package,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemDonnees.vhd,1655498484,vhdl2008,,,,memdonnees,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd,1655498484,vhdl2008,,,,meminstructions,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd,1654280164,vhdl2008,,,,alu,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd,1654286238,vhdl2008,,,,controleur,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd,1656354847,vhdl2008,,,,mips_datapath_unicycle,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd,1654280552,vhdl2008,,,,mips_unicycle_top,,,,,,,,
+/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/registres.vhd,1656355245,vhdl2008,,,,bancregistres,,,,,,,,
