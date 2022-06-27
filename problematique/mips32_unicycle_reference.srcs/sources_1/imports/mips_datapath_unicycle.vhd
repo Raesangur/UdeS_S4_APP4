@@ -84,10 +84,13 @@ end component;
 	Port ( 
 		i_a			: in std_ulogic_vector (31 downto 0);
 		i_b			: in std_ulogic_vector (31 downto 0);
-		i_alu_funct	: in std_ulogic_vector (3 downto 0);
+		i_av        : in std_ulogic_vector (127 downto 0);
+		i_bv        : in std_ulogic_vector (127 downto 0);
+		i_alu_funct : in std_ulogic_vector (3 downto 0);
 		i_shamt		: in std_ulogic_vector (4 downto 0);
 		o_result	: out std_ulogic_vector (31 downto 0);
-	    o_multRes    : out std_ulogic_vector (63 downto 0);
+		o_resultv   : out std_ulogic_vector (127 downto 0);
+	    o_multRes   : out std_ulogic_vector (63 downto 0);
 		o_zero		: out std_ulogic
 		);
 	end component;
@@ -95,7 +98,7 @@ end component;
 	constant c_Registre31		 : std_ulogic_vector(4 downto 0) := "11111";
 	signal s_zero        : std_ulogic;
 	
-    signal s_WriteRegDest_muxout: std_ulogic_vector(4 downto 0);
+    signal s_WriteRegDest_muxout   : std_ulogic_vector(4 downto 0);
 	
     signal r_PC                    : std_ulogic_vector(31 downto 0);
     signal s_PC_Suivant            : std_ulogic_vector(31 downto 0);
@@ -103,20 +106,20 @@ end component;
     signal s_adresse_jump          : std_ulogic_vector(31 downto 0);
     signal s_adresse_branche       : std_ulogic_vector(31 downto 0);
     
-    signal s_Instruction : std_ulogic_vector(31 downto 0);
+    signal s_Instruction           : std_ulogic_vector(31 downto 0);
 
-    signal s_opcode      : std_ulogic_vector( 5 downto 0);
-    signal s_RS          : std_ulogic_vector( 4 downto 0);
-    signal s_RT          : std_ulogic_vector( 4 downto 0);
-    signal s_RD          : std_ulogic_vector( 4 downto 0);
-    signal s_shamt       : std_ulogic_vector( 4 downto 0);
-    signal s_instr_funct : std_ulogic_vector( 5 downto 0);
-    signal s_imm16       : std_ulogic_vector(15 downto 0);
-    signal s_jump_field  : std_ulogic_vector(25 downto 0);
-    signal s_reg_data1        : std_ulogic_vector(31 downto 0);
-    signal s_reg_data2        : std_ulogic_vector(31 downto 0);
+    signal s_opcode                : std_ulogic_vector( 5 downto 0);
+    signal s_RS                    : std_ulogic_vector( 4 downto 0);
+    signal s_RT                    : std_ulogic_vector( 4 downto 0);
+    signal s_RD                    : std_ulogic_vector( 4 downto 0);
+    signal s_shamt                 : std_ulogic_vector( 4 downto 0);
+    signal s_instr_funct           : std_ulogic_vector( 5 downto 0);
+    signal s_imm16                 : std_ulogic_vector(15 downto 0);
+    signal s_jump_field            : std_ulogic_vector(25 downto 0);
+    signal s_reg_data1             : std_ulogic_vector(31 downto 0);
+    signal s_reg_data2             : std_ulogic_vector(31 downto 0);
     signal s_AluResult             : std_ulogic_vector(31 downto 0);
-    signal s_AluMultResult          : std_ulogic_vector(63 downto 0);
+    signal s_AluMultResult         : std_ulogic_vector(63 downto 0);
     
     signal s_Data2Reg_muxout       : std_ulogic_vector(31 downto 0);
     
@@ -229,9 +232,12 @@ inst_Alu: alu
 port map( 
 	i_a         => s_reg_data1,
 	i_b         => s_AluB_data,
+	i_av        => (others => '0'),
+	i_bv        => (others => '0'),
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
 	o_result    => s_AluResult,
+	o_resultv   => open,
 	o_multRes   => s_AluMultResult,
 	o_zero      => s_zero
 	);

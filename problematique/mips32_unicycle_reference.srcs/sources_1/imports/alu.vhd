@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Université de Sherbrooke 
---  Département de génie électrique et génie informatique
+--	Universite de Sherbrooke 
+--  Departement de genie electrique et genie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-André Tétrault
+--	Auteur: 		Marc-Andre Tetrault
 --					Daniel Dalle
---					Sébastien Roy
+--					Sebastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -21,9 +21,12 @@ entity alu is
 Port ( 
 	i_a          : in std_ulogic_vector (31 downto 0);
 	i_b          : in std_ulogic_vector (31 downto 0);
+	i_av         : in std_ulogic_vector (127 downto 0);
+	i_bv         : in std_ulogic_vector (127 downto 0);
 	i_alu_funct  : in std_ulogic_vector (3 downto 0);
 	i_shamt      : in std_ulogic_vector (4 downto 0);
 	o_result     : out std_ulogic_vector (31 downto 0);
+	o_resultv    : out std_ulogic_vector (127 downto 0);
 	o_multRes    : out std_ulogic_vector (63 downto 0);
 	o_zero       : out std_ulogic
 	);
@@ -31,8 +34,8 @@ end alu;
 
 architecture comport of alu is
     
-    signal decale 			: unsigned( 4 downto 0);
-    signal s_result 		: std_ulogic_vector (31 downto 0);
+    signal decale 			: unsigned(4 downto 0);
+    signal s_result 		: std_ulogic_vector (127 downto 0);
     signal s_multRes 		: std_ulogic_vector (63 downto 0);
     signal s_unsupported    : std_ulogic;
 	
@@ -40,52 +43,78 @@ begin
     -- conversion de type
     decale <= unsigned(i_shamt);
     
-    -- decodage et exécution de l'opération
+    -- decodage et execution de l'operation
     process(i_alu_funct, i_a, i_b, decale)
     begin
         s_unsupported <= '0';
         case i_alu_funct is
             when ALU_AND => 
-                s_result <= i_a and i_b;
+                s_result(31 downto 0)   <= i_a and i_b;
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_OR => 
-                s_result <= i_a or i_b;
+                s_result(31 downto 0)   <= i_a or i_b;
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_NOR => 
-                s_result <= i_a nor i_b;
+                s_result(31 downto 0)   <= i_a nor i_b;
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_ADD => 
-                s_result <= std_ulogic_vector(signed(i_a) + signed(i_b));
+                s_result(31 downto 0)   <= std_ulogic_vector(signed(i_a) + signed(i_b));
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_SUB => 
-                s_result <= std_ulogic_vector(signed(i_a) - signed(i_b));
+                s_result(31 downto 0)   <= std_ulogic_vector(signed(i_a) - signed(i_b));
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_SLL => 
-                s_result <= std_ulogic_vector(signed(i_b) sll to_integer( decale ));  
+                s_result(31 downto 0)   <= std_ulogic_vector(signed(i_b) sll to_integer( decale )); 
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_SRL => 
-                s_result <= std_ulogic_vector(signed(i_b) srl to_integer( decale )); 
+                s_result(31 downto 0)   <= std_ulogic_vector(signed(i_b) srl to_integer( decale )); 
+                s_result(127 downto 32) <= (others => '0');
+                
 			when ALU_SLL16 =>
-				s_result <= std_ulogic_vector(signed(i_b) sll 16 ); 
+				s_result(31 downto 0)   <= std_ulogic_vector(signed(i_b) sll 16 ); 
+				s_result(127 downto 32) <= (others => '0');
+				
             when ALU_SLT => 
                 if(signed(i_a) < signed(i_b)) then
-                    s_result <= X"00000001";      
+                    s_result(31 downto 0) <= X"00000001";      
                 else
-                    s_result <= X"00000000";
+                    s_result(31 downto 0) <= X"00000000";
                 end if;
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_SLTU => 
                 if(unsigned(i_a) < unsigned(i_b)) then
-                    s_result <= X"00000001";      
+                    s_result(31 downto 0) <= X"00000001";      
                 else
-                    s_result <= X"00000000";
+                    s_result(31 downto 0) <= X"00000000";
                 end if;
+                s_result(127 downto 32) <= (others => '0');
+                
             when ALU_MULTU =>
                 s_multRes <= std_ulogic_vector(unsigned(i_a) * unsigned(i_b));
+                s_result  <= (others => '0');
+                
             when ALU_NULL => 
 				s_result <= (others => '0');
+				
             when others =>
-                s_result <= i_a and i_b;
+                s_result(31 downto 0)   <= i_a and i_b;
+                s_result(127 downto 32) <= (others => '0');
                 s_unsupported <= '1';
+                
          end case;
      end process;
      
-     -- sorties spéciales, utiles pour certaines instructions
+     -- sorties spï¿½ciales, utiles pour certaines instructions
      o_zero <= '1' when (signed(s_result) = 0) else '0';
-	 o_result <= s_result;
+	 o_result  <= s_result(31 downto 0);
+	 o_resultv <= s_result;
 	 o_multRes <= s_multRes;
             
 end comport;

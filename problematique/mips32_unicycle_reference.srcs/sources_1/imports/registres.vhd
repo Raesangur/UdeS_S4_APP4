@@ -30,23 +30,19 @@ entity BancRegistres is
 end BancRegistres;
 
 
-0  - 15 : 32  bits
-16 - 23 : 128 bits
-24 - 31 : 32  bits
-
 architecture comport of BancRegistres is
     signal regs : RAM(0 to 23)   := (21 => X"100103FC", -- registre $SP
-                                    others => (others => '0'));
-    signal regsv: RAM128(0 to 7) := others => (others => '0');
+                                     others => (others => '0'));
+    signal regsv: RAM128(0 to 7) := (others => (others => '0'));
 
     signal int_i_RS1 : integer range 0 to 31 := 0;
     signal int_i_RS2 : integer range 0 to 31 := 0;
     signal int_i_WD  : integer range 0 to 31 := 0;
 begin
 
-    int_i_RS1 <= to_integer(unsigned(i_RS1);
-    int_i_RS2 <= to_integer(unsigned(i_RS2);
-    int_i_WD  <= to_integer(unsigned(i_WDest);
+    int_i_RS1 <= to_integer(unsigned(i_RS1));
+    int_i_RS2 <= to_integer(unsigned(i_RS2));
+    int_i_WD  <= to_integer(unsigned(i_WDest));
 
     process(clk)
     begin
@@ -54,7 +50,7 @@ begin
             if i_WE = '1' and reset = '0' and i_WDest /= "00000" then
                  if (int_i_WD < 16) then
                     regs(int_i_WD)       <= i_Wr_DAT(31 downto 0);
-                else if (int_i_RS1 > 23) then
+                elsif (int_i_WD > 23) then
                     regs(int_i_WD - 8)   <= i_Wr_DAT(31 downto 0);
                 else
                     regsv(int_i_WD - 16) <= i_Wr_DAT;
@@ -68,10 +64,10 @@ begin
     begin
         if (int_i_RS1 < 16) then
             o_RS1_DAT(31 downto 0)   <= regs(int_i_RS1);
-            o_RS1_DAT(127 downto 32) <= others => '0';
-        else if (int_i_RS1 > 23) then
+            o_RS1_DAT(127 downto 32) <= (others => '0');
+        elsif (int_i_RS1 > 23) then
             o_RS1_DAT(31 downto 0)   <= regs(int_i_RS1 - 8);
-            o_RS1_DAT(127 downto 32) <= others => '0';
+            o_RS1_DAT(127 downto 32) <= (others => '0');
         else
             o_RS1_DAT <= regsv(int_i_RS1 - 16);
         end if;
@@ -81,10 +77,10 @@ begin
     begin
         if (int_i_RS2 < 16) then
             o_RS2_DAT(31 downto 0)   <= regs(int_i_RS2);
-            o_RS2_DAT(127 downto 32) <= others => '0';
-        else if (int_i_RS2 > 23) then
+            o_RS2_DAT(127 downto 32) <= (others => '0');
+        elsif (int_i_RS2 > 23) then
             o_RS2_DAT(31 downto 0)   <= regs(int_i_RS2 - 8);
-            o_RS2_DAT(127 downto 32) <= others => '0';
+            o_RS2_DAT(127 downto 32) <= (others => '0');
         else
             o_RS2_DAT <= regsv(int_i_RS2 - 16);
         end if;
