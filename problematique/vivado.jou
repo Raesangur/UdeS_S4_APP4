@@ -31,3 +31,10 @@ run 10 us
 run 10 us
 run 100 us
 run 100 us
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source mips_unicycle_tb.tcl
+run 100 us
