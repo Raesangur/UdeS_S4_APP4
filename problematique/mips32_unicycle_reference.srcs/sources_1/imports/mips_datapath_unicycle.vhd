@@ -56,13 +56,14 @@ end component;
 
 component MemDonnees is
 Port ( 
-	clk : in std_ulogic;
-	reset : in std_ulogic;
-	i_MemRead 	: in std_ulogic;
-	i_MemWrite : in std_ulogic;
-    i_Addresse : in std_ulogic_vector (31 downto 0);
-	i_WriteData : in std_ulogic_vector (31 downto 0);
-    o_ReadData : out std_ulogic_vector (31 downto 0)
+	clk         : in  std_ulogic;
+	reset       : in  std_ulogic;
+	i_MemRead 	: in  std_ulogic;
+	i_MemWrite  : in  std_ulogic;
+	i_vect      : in  std_ulogic;
+    i_Addresse  : in  std_ulogic_vector (31  downto 0);
+	i_WriteData : in  std_ulogic_vector (127 downto 0);
+    o_ReadData  : out std_ulogic_vector (127 downto 0)
 );
 end component;
 
@@ -134,8 +135,9 @@ end component;
     signal r_HI             : std_ulogic_vector(31 downto 0);
     signal r_LO             : std_ulogic_vector(31 downto 0);
 	
-    signal unused_rs : std_logic_vector(95 downto 0);
-    signal unused_rt : std_logic_vector(95 downto 0);
+    signal unused_rs  : std_logic_vector(95 downto 0);
+    signal unused_rt  : std_logic_vector(95 downto 0);
+    signal unused_mem : std_logic_vector(95 downto 0);
     
 begin
 
@@ -247,13 +249,16 @@ port map(
 ------------------------------------------------------------------------
 inst_MemDonnees : MemDonnees
 Port map( 
-	clk 		=> clk,
-	reset 		=> reset,
-	i_MemRead	=> i_MemRead,
-	i_MemWrite	=> i_MemWrite,
-    i_Addresse	=> s_AluResult,
-	i_WriteData => s_reg_data2,
-    o_ReadData	=> s_MemoryReadData
+	clk 		               => clk,
+	reset 		               => reset,
+	i_MemRead	               => i_MemRead,
+	i_MemWrite	               => i_MemWrite,
+	i_vect                     => '0',
+    i_Addresse	               => s_AluResult,
+	i_WriteData(31 downto 0)   => s_reg_data2,
+	i_WriteData(127 downto 32) => (others => '0'),
+    o_ReadData(31 downto 0)	   => s_MemoryReadData,
+    o_ReadData(127 downto 32)  => unused_mem
 	);
 	
 

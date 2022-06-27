@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Université de Sherbrooke 
---  Département de génie électrique et génie informatique
+--	Universitï¿½ de Sherbrooke 
+--  Dï¿½partement de gï¿½nie ï¿½lectrique et gï¿½nie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-André Tétrault
+--	Auteur: 		Marc-Andrï¿½ Tï¿½trault
 --					Daniel Dalle
---					Sébastien Roy
+--					Sï¿½bastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -24,16 +24,17 @@ Port (
 	reset 		: in std_ulogic;
 	i_MemRead 	: in std_ulogic;
 	i_MemWrite 	: in std_ulogic;
+	i_vect      : in std_ulogic;
     i_Addresse 	: in std_ulogic_vector (31 downto 0);
-	i_WriteData : in std_ulogic_vector (31 downto 0);
-    o_ReadData 	: out std_ulogic_vector (31 downto 0)
+	i_WriteData : in std_ulogic_vector (127 downto 0);
+    o_ReadData 	: out std_ulogic_vector (127 downto 0)
 );
 end MemDonnees;
 
 architecture Behavioral of MemDonnees is
-    signal ram_DataMemory : RAM(0 to 255) := ( -- type défini dans le package
+    signal ram_DataMemory : RAM(0 to 255) := ( -- type dï¿½fini dans le package
 ------------------------
--- Insérez vos donnees ici
+-- Insï¿½rez vos donnees ici
 ------------------------
 --  TestMirroir_data
 X"12345678",
@@ -51,28 +52,41 @@ X"5555cccc",
 ------------------------
     others => X"00000000");
 
-    signal s_MemoryIndex 	: integer range 0 to 255; -- 0-127
+    signal s_MemoryIndex 	    : integer range 0 to 255; -- 0-127
 	signal s_MemoryRangeValid 	: std_ulogic;
 
 begin
-    -- Transformation de l'adresse en entier à interval fixés
+    -- Transformation de l'adresse en entier ï¿½ interval fixï¿½s
     s_MemoryIndex 	<= to_integer(unsigned(i_Addresse(9 downto 2)));
 	s_MemoryRangeValid <= '1' when i_Addresse(31 downto 10) = (X"10010" & "00") else '0'; 
 	
 	
-	-- Partie pour l'écriture
+	-- Partie pour l'ï¿½criture
 	process( clk )
     begin
         if clk='1' and clk'event then
             if i_MemWrite = '1' and reset = '0' and s_MemoryRangeValid = '1' then
-                ram_DataMemory(s_MemoryIndex) <= i_WriteData;
+                if (i_vect = '0') then
+                    ram_DataMemory(s_MemoryIndex) <= i_WriteData(31 downto 0);
+                else
+                    ram_DataMemory(s_MemoryIndex)     <= i_WriteData(31 downto 0);
+                    ram_DataMemory(s_MemoryIndex + 1) <= i_WriteData(63 downto 32);
+                    ram_DataMemory(s_MemoryIndex + 2) <= i_WriteData(95 downto 64);
+                    ram_DataMemory(s_MemoryIndex + 3) <= i_WriteData(127 downto 96);
+                end if;
             end if;
         end if;
     end process;
 
-    -- Valider que nous sommes dans le segment de mémoire, avec 256 addresses valides
-    o_ReadData <= ram_DataMemory(s_MemoryIndex) when (s_MemoryRangeValid = '1' and i_MemRead = '1')
-                    else (others => '0');
+    -- Valider que nous sommes dans le segment de memoire, avec 256 addresses valides
+    o_ReadData(31 downto 0)   <= ram_DataMemory(s_MemoryIndex)     when (s_MemoryRangeValid = '1' and i_MemRead = '1')
+                                 else (others => '0');
+    o_ReadData(63 downto 32)  <= ram_DataMemory(s_MemoryIndex + 1) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
+                                 else (others => '0');
+    o_ReadData(95 downto 64)  <= ram_DataMemory(s_MemoryIndex + 2) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
+                                 else (others => '0');
+    o_ReadData(127 downto 96) <= ram_DataMemory(s_MemoryIndex + 3) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
+                                 else (others => '0');
 
 end Behavioral;
 
