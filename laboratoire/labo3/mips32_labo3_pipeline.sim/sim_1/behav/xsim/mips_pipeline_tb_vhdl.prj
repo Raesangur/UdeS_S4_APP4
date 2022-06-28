@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/MIPS32_package.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/alu.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/controleur.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/MemInstructions.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/MemDonnees.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/registres_pipeline.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/mips_datapath_pipeline.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sources_1/imports/mips_pipeline_top.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sim_1/imports/verif/mips_pipeline_tb.vhd" \
+"../../../../mips32_labo3_pipeline.srcs/sim_1/imports/verif/monitor_pipeline.vhd" \
+
+# Do not sort compile order
+nosort

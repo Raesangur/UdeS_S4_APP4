@@ -1,0 +1,25 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 6b427e5d64664d61864af687a225e5ce --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_pipeline_tb_behav xil_defaultlib.mips_pipeline_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_pipeline [mips_datapath_pipeline_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_pipeline_top [mips_pipeline_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_pipeline [monitor_pipeline_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_pipeline_tb
+Built simulation snapshot mips_pipeline_tb_behav
