@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="390550fs"></ZoomStartTime>
-      <ZoomEndTime time="401891fs"></ZoomEndTime>
-      <Cursor1Time time="400000fs"></Cursor1Time>
+      <ZoomStartTime time="205225fs"></ZoomStartTime>
+      <ZoomEndTime time="265226fs"></ZoomEndTime>
+      <Cursor1Time time="210000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="31" />
    <wvobject type="logic" fp_name="/mips_unicycle_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -60,6 +60,10 @@
       <obj_property name="ElementShortName">s_MemoryRangeValid</obj_property>
       <obj_property name="ObjectShortName">s_MemoryRangeValid</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_Data2Reg_muxout">
+      <obj_property name="ElementShortName">s_Data2Reg_muxout[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_Data2Reg_muxout[127:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/i_RS1">
       <obj_property name="ElementShortName">i_RS1[4:0]</obj_property>
       <obj_property name="ObjectShortName">i_RS1[4:0]</obj_property>
@@ -83,6 +87,10 @@
    <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/int_i_RS2">
       <obj_property name="ElementShortName">int_i_RS2</obj_property>
       <obj_property name="ObjectShortName">int_i_RS2</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/int_i_WD">
+      <obj_property name="ElementShortName">int_i_WD</obj_property>
+      <obj_property name="ObjectShortName">int_i_WD</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_reg_data1">
       <obj_property name="ElementShortName">s_reg_data1[127:0]</obj_property>
@@ -123,11 +131,11 @@
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/regs">
       <obj_property name="ElementShortName">regs[0:23][31:0]</obj_property>
       <obj_property name="ObjectShortName">regs[0:23][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/regsv">
       <obj_property name="ElementShortName">regsv[0:7][127:0]</obj_property>
       <obj_property name="ObjectShortName">regsv[0:7][127:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_MemoryReadData">
       <obj_property name="ElementShortName">s_MemoryReadData[127:0]</obj_property>
@@ -136,5 +144,6 @@
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_MemDonnees/ram_DataMemory">
       <obj_property name="ElementShortName">ram_DataMemory[0:255][31:0]</obj_property>
       <obj_property name="ObjectShortName">ram_DataMemory[0:255][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

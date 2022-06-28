@@ -56,7 +56,7 @@ X"5555cccc",
 	signal s_MemoryRangeValid 	: std_ulogic;
 
 begin
-    -- Transformation de l'adresse en entier � interval fix�s
+    -- Transformation de l'adresse en entier a interval fixes
     s_MemoryIndex 	<= to_integer(unsigned(i_Addresse(9 downto 2)));
 	s_MemoryRangeValid <= '1' when i_Addresse(31 downto 10) = (X"10010" & "00") else '0'; 
 	

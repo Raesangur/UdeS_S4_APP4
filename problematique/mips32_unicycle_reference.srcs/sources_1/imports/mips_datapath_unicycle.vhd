@@ -267,11 +267,28 @@ Port map(
 -- Mux d'�criture vers le banc de registres
 ------------------------------------------------------------------------
 
-s_Data2Reg_muxout    <= (s_adresse_PC_plus_4, others => '0') when i_jump_link = '1' else
-					    (r_HI,                others => '0') when i_mfhi = '1' else 
-					    (r_LO,                others => '0') when i_mflo = '1' else
-					    (s_AluResult,         others => '0') when i_MemtoReg = '0' else 
-						 s_MemoryReadData;
+process(s_adresse_PC_plus_4, i_jump_link, r_HI, r_LO, i_mfhi, i_mflo, s_AluResult, i_MemtoReg, s_MemoryReadData)
+begin
+    if (i_jump_link = '1') then
+        s_Data2Reg_muxout(31 downto 0)   <= s_adresse_PC_plus_4;
+        s_Data2Reg_muxout(127 downto 32) <= (others => '0');
+        
+    elsif(i_mfhi = '1') then
+        s_Data2Reg_muxout(31 downto 0)   <= r_HI;
+        s_Data2Reg_muxout(127 downto 32) <= (others => '0');
+        
+    elsif(i_mflo = '1') then
+        s_Data2Reg_muxout(31 downto 0)   <= r_LO;
+        s_Data2Reg_muxout(127 downto 32) <= (others => '0');
+        
+    elsif(i_MemtoReg = '0') then
+        s_Data2Reg_muxout(31 downto 0)   <= s_AluResult;
+        s_Data2Reg_muxout(127 downto 32) <= (others => '0');
+        
+    else
+        s_Data2Reg_muxout <= s_MemoryReadData;
+    end if;
+end process;
 
 
 		

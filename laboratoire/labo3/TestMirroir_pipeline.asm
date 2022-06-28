@@ -33,6 +33,7 @@ main:
     #nop
     #nop
     lw $a0, 0($at)
+    sw $a0, 3($at)
     nop
     #nop
     add $t9, $zero, $a0     # pour voir bulle avec winmips64
