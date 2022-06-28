@@ -60,7 +60,7 @@ begin
         end if;
     end process;
 
-    process(int_i_RS1)
+    process(int_i_RS1, regs, regsv)
     begin
         if (int_i_RS1 < 16) then
             o_RS1_DAT(31 downto 0)   <= regs(int_i_RS1);
@@ -73,7 +73,7 @@ begin
         end if;
     end process;
 
-    process(int_i_RS2)
+    process(int_i_RS2, regs, regsv)
     begin
         if (int_i_RS2 < 16) then
             o_RS2_DAT(31 downto 0)   <= regs(int_i_RS2);

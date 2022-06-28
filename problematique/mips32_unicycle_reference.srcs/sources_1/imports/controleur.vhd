@@ -72,6 +72,8 @@ begin
 				o_AluFunct <= ALU_NULL;
 			when OP_SW => 
 				o_AluFunct <= ALU_ADD;
+			when OP_SWV =>
+			    o_AluFunct <= ALU_ADD;
 			when OP_LW => 
 				o_AluFunct <= ALU_ADD;
 			when OP_LWV =>
@@ -132,28 +134,20 @@ begin
 	
 	o_RegDst 		<= '1' when i_Op = OP_Rtype else '0';
 	
-	o_ALUSrc 		<= '0' when i_Op = OP_Rtype or
-								i_Op = OP_BEQ
-						else '1';
+	o_ALUSrc 		<= '0' when i_Op = OP_Rtype or i_Op = OP_BEQ else '1';
 	o_Branch 		<= '1' when i_Op = OP_BEQ   else '0';
-	o_MemRead 		<= '1' when i_Op = OP_LW or i_Op = OP_LWV else '0';
-	o_MemWrite 		<= '1' when i_Op = OP_SW else '0';
-	o_MemtoReg 		<= '1' when i_Op = OP_LW or i_Op = OP_LWV else '0';
-	o_vect          <= '1' when i_Op = OP_LWV else '0';
-	o_SignExtend	<= '1' when i_OP = OP_ADDI or
-	                           i_OP = OP_BEQ 
-	                     else '0';
+	o_MemRead 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
+	o_MemWrite 		<= '1' when i_Op = OP_SW    or i_Op = OP_SWV else '0';
+	o_MemtoReg 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
+	o_vect          <= '1' when i_Op = OP_LWV   or i_OP = OP_SWV else '0';
+	o_SignExtend	<= '1' when i_OP = OP_ADDI  or i_OP = OP_BEQ else '0';
 	
 	
-	o_Jump	 		<= '1' when i_Op = OP_J or 
-	                            i_Op = OP_JAL 
-						else '0';
+	o_Jump	 		<= '1' when i_Op = OP_J or i_Op = OP_JAL else '0';
 				
 				
 	o_jump_link 	<= '1' when i_Op = OP_JAL else '0';
-	o_jump_register <= '1' when i_Op = OP_Rtype and 
-								i_funct_field = ALUF_JR 
-						else '0';
+	o_jump_register <= '1' when i_Op = OP_Rtype and i_funct_field = ALUF_JR else '0';
 	
 	o_alu_mult      <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MULTU else '0';
 	o_mflo          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFLO else '0';

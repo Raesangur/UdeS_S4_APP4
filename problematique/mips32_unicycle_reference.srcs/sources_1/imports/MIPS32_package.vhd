@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Universit� de Sherbrooke 
---  D�partement de g�nie �lectrique et g�nie informatique
+--	Universite de Sherbrooke 
+--  Departement de genie electrique et genie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-Andr� T�trault
+--	Auteur: 		Marc-Andre Tetrault
 --					Daniel Dalle
---					S�bastien Roy
+--					Sebastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -17,8 +17,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 package MIPS32_package is
-    -- codes d'op�ration internes de l'ALU
-    -- Nous d�finissons ces codes et on aurait pu adopter un autre encodage
+    -- codes d'operation internes de l'ALU
+    -- Nous definissons ces codes et on aurait pu adopter un autre encodage
     constant ALU_AND  : std_ulogic_vector( 3 downto 0 ) := "0000";
     constant ALU_OR   : std_ulogic_vector( 3 downto 0 ) := "0001";
     constant ALU_ADD  : std_ulogic_vector( 3 downto 0 ) := "0010";
@@ -36,8 +36,8 @@ package MIPS32_package is
     constant ALU_NULL : std_ulogic_vector( 3 downto 0 ) := "1111";
     
     -- codes du champ function des instructions de type R
-    -- Ces codes sont d�finis par l'encodage des instructions MIPS
-    -- voir entre autres p. 301 COD �dition 5
+    -- Ces codes sont definis par l'encodage des instructions MIPS
+    -- voir entre autres p. 301 COD edition 5
     constant ALUF_SLL       : std_ulogic_vector( 5 downto 0 ) := "000000";
     constant ALUF_SRL       : std_ulogic_vector( 5 downto 0 ) := "000010";
     constant ALUF_SRA       : std_ulogic_vector( 5 downto 0 ) := "000110";
@@ -56,7 +56,7 @@ package MIPS32_package is
     constant ALUF_SLTU      : std_ulogic_vector( 5 downto 0 ) := "101011";
     constant ALUF_SYSCALL	: std_ulogic_vector( 5 downto 0 ) := "001100";
     
-    -- opcodes dans le d�codage d'instructions
+    -- opcodes dans le decodage d'instructions
     constant OP_Rtype : std_ulogic_vector( 5 downto 0 ) := "000000";
     constant OP_J     : std_ulogic_vector( 5 downto 0 ) := "000010";
     constant OP_JAL   : std_ulogic_vector( 5 downto 0 ) := "000011";
@@ -68,6 +68,7 @@ package MIPS32_package is
     constant OP_LW    : std_ulogic_vector( 5 downto 0 ) := "100011";
     constant OP_LWV   : std_ulogic_vector( 5 downto 0 ) := "011100";
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
+    constant OP_SWV   : std_ulogic_vector( 5 downto 0 ) := "011101";
 	
 	
 	constant c_Mips32_Nop	 	: std_ulogic_vector(31 downto 0) := X"00000000";
@@ -107,6 +108,7 @@ package MIPS32_package is
 		sim_OP_LW,
 		sim_OP_LWV,
 		sim_OP_SW,
+		sim_OP_SWV,
 		sim_OP_SYSCALL,
         sim_OP_Undefined
     );
@@ -212,6 +214,8 @@ begin
 		    CurrentOp := sim_OP_LWV;
 		when OP_SW =>
 			CurrentOp := sim_OP_SW;
+		when OP_SWV =>
+		    CurrentOp := sim_OP_SWV;
 		when others =>
 			CurrentOp := sim_OP_Undefined;
 	end case;
