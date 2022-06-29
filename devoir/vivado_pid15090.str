@@ -1,0 +1,1145 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 15090
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jun 29 15:12:01 EDT 2022
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 5.15.0-39-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0
+Screen size: 2256x1504
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	raesangur
+User home directory: /home/raesangur
+User working directory: /home/raesangur/github/UdeS_S4_APP4/devoir
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: /usr/share/Xilinx/Vivado
+HDI_APPROOT: /usr/share/Xilinx/Vivado/2020.2
+RDI_DATADIR: /usr/share/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /usr/share/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/raesangur/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/raesangur/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/raesangur/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/usr/share/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/raesangur/github/UdeS_S4_APP4/devoir/vivado.log
+Vivado journal file location: 	/home/raesangur/github/UdeS_S4_APP4/devoir/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-15090-mini-pascal
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /usr/share/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /usr/share/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	190 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,497 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,497 MB. GUI used memory: 77 MB. Current time: 6/29/22, 3:12:02 PM EDT
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr", 0); // r
+// [GUI Memory]: 107 MB (+109865kb) [00:00:13]
+// [Engine Memory]: 1,499 MB (+1420134kb) [00:00:13]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 127 MB (+15550kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  2735 ms.
+// Tcl Message: open_project /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// Project name: mips32_unicycle_reference; location: /home/raesangur/github/UdeS_S4_APP4/problematique; part: xc7z010clg400-1
+// [GUI Memory]: 136 MB (+2706kb) [00:00:17]
+dismissDialog("Open Project"); // bz
+// [Engine Memory]: 1,582 MB (+8334kb) [00:00:19]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd)]", 1); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+// [GUI Memory]: 144 MB (+1107kb) [00:00:24]
+selectCodeEditor("MIPS32_package.vhd", 86, 359); // bP
+selectCodeEditor("MIPS32_package.vhd", 86, 359); // bP
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+selectCodeEditor("MIPS32_package.vhd", 788, 465); // bP
+selectCodeEditor("MIPS32_package.vhd", 750, 485); // bP
+selectCodeEditor("MIPS32_package.vhd", 763, 520); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,603 MB. GUI used memory: 86 MB. Current time: 6/29/22, 3:12:37 PM EDT
+// Run Command: PAResourceCommand.PACommandNames_PROPERTIES_WINDOW
+// RDIResource.RDIViews_PROPERTIES: Source File Properties: close view
+// Elapsed time: 22 seconds
+selectCodeEditor("MIPS32_package.vhd", 747, 241); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,623 MB. GUI used memory: 86 MB. Current time: 6/29/22, 3:12:52 PM EDT
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 21 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 187, 768); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 146, 292); // bP
+// Run Command: PAResourceCommand.PACommandNames_PROPERTIES_WINDOW
+// Elapsed time: 24 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 271, 372); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 271, 372, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 402, 253); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 82, 620); // bP
+typeControlKey((HResource) null, "mips_datapath_unicycle.vhd", 'c'); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 98, 609); // bP
+typeControlKey((HResource) null, "mips_datapath_unicycle.vhd", 'v'); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 94, 665); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 362, 720); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 332, 741); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 332, 741, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 306, 509); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 306, 509, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 632, 305); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 438, 760); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 438, 760); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 438, 760); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 334, 362); // bP
+// Elapsed time: 450 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 54, 211); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 54, 211); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 54, 211); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 54, 211); // bP
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Registres : BancRegistres(comport) (registres.vhd)]", 5, false); // D
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemDonnees : MemDonnees(Behavioral) (MemDonnees.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemDonnees : MemDonnees(Behavioral) (MemDonnees.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 53 seconds
+selectCodeEditor("MemDonnees.vhd", 54, 340); // bP
+selectCodeEditor("MemDonnees.vhd", 54, 340); // bP
+selectCodeEditor("MemDonnees.vhd", 54, 340); // bP
+selectCodeEditor("MemDonnees.vhd", 54, 340); // bP
+selectCodeEditor("MemDonnees.vhd", 54, 340); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 277, 508); // bP
+selectCodeEditor("MemDonnees.vhd", 425, 649); // bP
+selectCodeEditor("MemDonnees.vhd", 425, 649); // bP
+selectCodeEditor("MemDonnees.vhd", 425, 649); // bP
+selectCodeEditor("MemDonnees.vhd", 425, 649); // bP
+selectCodeEditor("MemDonnees.vhd", 425, 649); // bP
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 2); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 332, 721); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 319, 774); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 319, 774, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 237, 788); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 237, 788, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 354, 561); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 364, 717); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 96, 826); // bP
+typeControlKey((HResource) null, "mips_datapath_unicycle.vhd", 'c'); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 87, 813); // bP
+typeControlKey((HResource) null, "mips_datapath_unicycle.vhd", 'v'); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 97, 710); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 359, 381); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 361, 532); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 182, 631); // bP
+typeControlKey((HResource) null, "mips_datapath_unicycle.vhd", 'v'); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 365, 738); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 366, 760); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 368, 897); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 97, 225); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,654 MB. GUI used memory: 88 MB. Current time: 6/29/22, 3:27:02 PM EDT
+selectCodeEditor("mips_datapath_unicycle.vhd", 573, 198); // bP
+// [Engine Memory]: 1,662 MB (+809kb) [00:15:11]
+// Elapsed time: 60 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 535, 348); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 528, 333); // bP
+// Elapsed time: 121 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("MemInstructions.vhd", 125, 863); // bP
+selectCodeEditor("MemInstructions.vhd", 49, 713); // bP
+selectCodeEditor("MemInstructions.vhd", 49, 713, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MIPS32_package.vhd" into library xil_defaultlib INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log Vivado Simulator 2020.2 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log  Using 8 slave threads. Starting static elaboration 
+// Tcl Message: ERROR: [VRFC 10-3311] expression has 64 elements ; formal 'o_result' expects 32 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:256] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit mips_unicycle_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 5 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+applyEnter(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, (String) null); // u
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS32_package.vhd", 1); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Registres : BancRegistres(comport) (registres.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Registres : BancRegistres(comport) (registres.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("registres.vhd", 146, 233); // bP
+selectCodeEditor("registres.vhd", 146, 233, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 239 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// Elapsed time: 157 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 289, 253); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 289, 253, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 499, 456); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 433, 58); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 433, 58, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 405, 619); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 405, 619); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 405, 619); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 626, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 688, 562); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 732, 570); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 421, 540); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 505, 533); // bP
+// Elapsed time: 51 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a
+// 'd' command handler elapsed time: 3 seconds
+dismissDialog("Save Project"); // am
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Registres : BancRegistres(comport) (registres.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Registres : BancRegistres(comport) (registres.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("registres.vhd", 164, 81); // bP
+selectCodeEditor("registres.vhd", 164, 81, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("registres.vhd", 164, 80); // bP
+selectCodeEditor("registres.vhd", 160, 73); // bP
+selectCodeEditor("registres.vhd", 160, 73, false, false, false, false, true); // bP - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// Elapsed time: 21 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 406, 432); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 406, 432, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 406, 432); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 406, 432); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 406, 432); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 836, 437); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 836, 437); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 836, 437, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 641, 506); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemInstr : MemInstructions(Behavioral) (MemInstructions.vhd)]", 4, false); // D
+selectCodeEditor("MemInstructions.vhd", 257, 481); // bP
+selectCodeEditor("MemInstructions.vhd", 59, 585); // bP
+selectCodeEditor("MemInstructions.vhd", 59, 585, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 156 seconds
+selectCodeEditor("MemInstructions.vhd", 257, 535); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 2); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 393, 329); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 490, 200); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 495, 249); // bP
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2020.2 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log  Using 8 slave threads. Starting static elaboration ERROR: [VRFC 10-3311] expression has 64 elements ; formal 'o_result' expects 32 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:256] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit mips_unicycle_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 8 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+unMinimizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // az
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-3311] expression has 64 elements ; formal 'o_result' expects 32 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:256]. ]", 23, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd;-;;-;16;-;line;-;256;-;;-;16;-;"); // ah
+selectCodeEditor("mips_datapath_unicycle.vhd", 466, 595); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 461, 466); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,693 MB. GUI used memory: 92 MB. Current time: 6/29/22, 3:43:57 PM EDT
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+// Tcl Message: Built simulation snapshot mips_unicycle_tb_behav 
+// Tcl Message:  ****** Webtalk v2020.2 (64-bit)   **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020   **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.  source /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/xsim.dir/mips_unicycle_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/xsim.dir/mips_unicycle_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Jun 29 15:44:07 2022. For additional details about this file, please refer to the WebTalk help file at /usr/share/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html. webtalk_transmit: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 421.434 ; gain = 0.148 ; free physical = 12851 ; free virtual = 25869 INFO: [Common 17-206] Exiting Webtalk at Wed Jun 29 15:44:07 2022... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 7399.961 ; gain = 0.000 ; free physical = 12916 ; free virtual = 25934 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mips_unicycle_tb_behav -key {Behavioral:sim_1:Functional:mips_unicycle_tb} -tclbatch {mips_unicycle_tb.tcl} -view {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 13 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [Engine Memory]: 1,756 MB (+11985kb) [00:32:18]
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,758 MB. GUI used memory: 107 MB. Current time: 6/29/22, 3:44:10 PM EDT
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config /home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg 
+// Tcl Message: source mips_unicycle_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 10000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'mips_unicycle_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 10000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 7515.789 ; gain = 128.824 ; free physical = 12853 ; free virtual = 25886 
+// 'd' command handler elapsed time: 14 seconds
+dismissDialog("Run Simulation"); // e
+// [GUI Memory]: 152 MB (+611kb) [00:32:20]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,743 MB. GUI used memory: 99 MB. Current time: 6/29/22, 4:17:02 PM EDT
+// Elapsed time: 1979 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS32_package.vhd", 0); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "inst_monitor ; monitor_unicycle(Behavioral) ; VHDL Entity", 2, "inst_monitor", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "dut ; mips_unicycle_top(Behavioral) ; VHDL Entity", 1, "dut", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "inst_Datapath ; mips_datapath_unicycle(Behavioral) ; VHDL Entity", 3, "inst_Datapath", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "inst_Datapath ; mips_datapath_unicycle(Behavioral) ; VHDL Entity", 3, "inst_Datapath", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "inst_Alu ; alu(comport) ; VHDL Entity", 6, "inst_Alu", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "inst_Alu ; alu(comport) ; VHDL Entity", 6, "inst_Alu", 0, false, false, false, false, false, true); // c - Double Click
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_OPEN_SOURCE
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+selectCodeEditor("alu.vhd", 304, 425); // bP
+// Elapsed time: 128 seconds
+selectCodeEditor("alu.vhd", 381, 478, false, false, false, true, false); // bP - Popup Trigger
+selectCodeEditor("alu.vhd", 447, 345); // bP
+selectCodeEditor("alu.vhd", 346, 461); // bP
+selectCodeEditor("alu.vhd", 307, 341); // bP
+selectCodeEditor("alu.vhd", 589, 371); // bP
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 0); // m
+// Elapsed time: 17 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 275, 248); // bP
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 251, 345); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 796, 436); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 583, 565); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("mips_datapath_unicycle.vhd", 509, 599, true, false, false, false, false); // bP - Shift Key
+closeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // az
+// PAResourceOtoP.PAViews_PROTOCOL_INSTANCES: Objects: close view
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 520, 538); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 335, 467); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 297, 567); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 289, 532); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 278, 595); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 259, 715); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,793 MB. GUI used memory: 93 MB. Current time: 6/29/22, 4:21:37 PM EDT
+// Elapsed time: 135 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.vhd", 3); // m
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 519, 400); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectCodeEditor("alu.vhd", 468, 376); // bP
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aK
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("MIPS32_package.vhd", 742, 657); // bP
+selectCodeEditor("MIPS32_package.vhd", 488, 167); // bP
+selectCodeEditor("MIPS32_package.vhd", 488, 167); // bP
+selectCodeEditor("MIPS32_package.vhd", 488, 167); // bP
+selectCodeEditor("MIPS32_package.vhd", 488, 167); // bP
+selectCodeEditor("MIPS32_package.vhd", 488, 167); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 189, 208); // bP
+selectCodeEditor("MIPS32_package.vhd", 181, 436); // bP
+selectCodeEditor("MIPS32_package.vhd", 181, 436, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "MIPS32_package.vhd", 'c'); // bP
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR", true); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALUF_JR"); // l
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.vhd", 3); // m
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectCodeEditor("alu.vhd", 653, 195); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, controleur.vhd]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, controleur.vhd]", 5, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,819 MB. GUI used memory: 94 MB. Current time: 6/29/22, 4:25:02 PM EDT
+selectCodeEditor("controleur.vhd", 211, 422); // bP
+selectCodeEditor("controleur.vhd", 211, 422); // bP
+selectCodeEditor("controleur.vhd", 211, 422); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectCodeEditor("controleur.vhd", 351, 477); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS32_package.vhd", 4); // m
+selectCodeEditor("MIPS32_package.vhd", 483, 460); // bP
+selectCodeEditor("MIPS32_package.vhd", 483, 460, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("MIPS32_package.vhd", 484, 214); // bP
+selectCodeEditor("MIPS32_package.vhd", 484, 214, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("MIPS32_package.vhd", 661, 224); // bP
+selectCodeEditor("MIPS32_package.vhd", 661, 224, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("MIPS32_package.vhd", 664, 459); // bP
+selectCodeEditor("MIPS32_package.vhd", 664, 459, false, true, true, false, true); // bP - Control Key - Alt Key - Double Click
+selectCodeEditor("MIPS32_package.vhd", 676, 333); // bP
+selectCodeEditor("MIPS32_package.vhd", 663, 456); // bP
+selectCodeEditor("MIPS32_package.vhd", 663, 456, false, true, true, false, true); // bP - Control Key - Alt Key - Double Click
+selectCodeEditor("MIPS32_package.vhd", 665, 421); // bP
+selectCodeEditor("MIPS32_package.vhd", 659, 462); // bP
+selectCodeEditor("MIPS32_package.vhd", 662, 459, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("MIPS32_package.vhd", 781, 395, false, false, false, true, false); // bP - Popup Trigger
+selectCodeEditor("MIPS32_package.vhd", 726, 403); // bP
+selectCodeEditor("MIPS32_package.vhd", 809, 439); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.vhd", 3); // m
+selectCodeEditor("alu.vhd", 455, 359); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_unicycle_tb_behav.wcfg", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS32_package.vhd", 4); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,838 MB. GUI used memory: 95 MB. Current time: 6/29/22, 4:26:07 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.vhd", 3); // m
+// [Engine Memory]: 1,846 MB (+1708kb) [01:14:16]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_unicycle_tb_behav.wcfg", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemInstructions.vhd", 1); // m
+// Waveform: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "mips_unicycle_tb_behav.wcfg"); // w
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 0); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 292, 217); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 292, 217, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_datapath_unicycle.vhd", 503, 379); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 503, 379); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 283, 461); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 482, 271); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controleur.vhd", 3); // m
+selectCodeEditor("controleur.vhd", 504, 198); // bP
+selectCodeEditor("controleur.vhd", 102, 251); // bP
+selectCodeEditor("controleur.vhd", 102, 251, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 298, 397); // bP
+selectCodeEditor("controleur.vhd", 400, 389); // bP
+selectCodeEditor("controleur.vhd", 400, 389); // bP
+selectCodeEditor("controleur.vhd", 400, 389); // bP
+selectCodeEditor("controleur.vhd", 400, 389); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bz (cr):  Close : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7568.809 ; gain = 1.000 ; free physical = 12185 ; free virtual = 25439 
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Close"); // bz
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 14 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 5 elements ; expected 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:62]. ]", 28, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd;-;;-;16;-;line;-;62;-;;-;16;-;"); // ah
+selectCodeEditor("controleur.vhd", 502, 330); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Wed Jun 29 16:27:23 2022] Launched synth_1... Run output will be captured here: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'controleur' INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 4 elements ; expected 5 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:41]. ]", 28, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd;-;;-;16;-;line;-;41;-;;-;16;-;"); // ah
+selectCodeEditor("mips_unicycle_top.vhd", 462, 47); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_unicycle_top' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// TclEventType: RUN_STEP_COMPLETED
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+// ag (cr): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-3311] expression has 4 elements ; formal 'o_alufunct' expects 5 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:121]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd;-;;-;16;-;line;-;121;-;;-;16;-;"); // ah
+selectCodeEditor("mips_unicycle_top.vhd", 317, 285); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 317, 285, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_unicycle_top.vhd", 539, 172); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, true); // ah - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:60]. ]", 5, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd;-;;-;16;-;line;-;60;-;;-;16;-;"); // ah
+selectCodeEditor("controleur.vhd", 446, 281); // bP
+selectCodeEditor("controleur.vhd", 446, 281, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("controleur.vhd", 560, 359); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,863 MB. GUI used memory: 93 MB. Current time: 6/29/22, 4:28:22 PM EDT
+selectCodeEditor("controleur.vhd", 498, 479); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'controleur' INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_unicycle_top' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2020.2 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log  Using 8 slave threads. Starting static elaboration ERROR: [VRFC 10-3311] expression has 5 elements ; formal 'i_alu_funct' expects 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:144] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit mips_unicycle_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-3311] expression has 5 elements ; formal 'i_alu_funct' expects 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:144]. ]", 11, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-3311] expression has 5 elements ; formal 'i_alu_funct' expects 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:144]. ]", 11, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd;-;;-;16;-;line;-;144;-;;-;16;-;"); // ah
+selectCodeEditor("mips_unicycle_top.vhd", 310, 283); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 310, 283, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_unicycle_top.vhd", 134, 415); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 121, 428); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 121, 428, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("mips_unicycle_top.vhd", 486, 456); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectCodeEditor("mips_unicycle_top.vhd", 474, 543); // bP
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'controleur' [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:46]. ]", 7, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd;-;;-;16;-;line;-;46;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:60]. ]", 6, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd;-;;-;16;-;line;-;60;-;;-;16;-;"); // ah
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'mips_unicycle_top' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2020.2 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log  Using 8 slave threads. Starting static elaboration ERROR: [VRFC 10-664] expression has 5 elements ; expected 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd:39] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit mips_unicycle_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 5 elements ; expected 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd:39]. ]", 11, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd;-;;-;16;-;line;-;39;-;;-;16;-;"); // ah
+selectCodeEditor("monitor_unicycle.vhd", 457, 284); // bP
+selectCodeEditor("monitor_unicycle.vhd", 457, 284, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 14 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 5 elements ; expected 4 [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd:39]. ]", 11, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sim_1/imports/verif/monitor_unicycle.vhd;-;;-;16;-;line;-;39;-;;-;16;-;"); // ah
+selectCodeEditor("monitor_unicycle.vhd", 450, 281); // bP
+selectCodeEditor("monitor_unicycle.vhd", 450, 281, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "monitor_unicycle.vhd", 'c'); // bP
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction", true); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction"); // l
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction"); // l
+selectCodeEditor("monitor_unicycle.vhd", 399, 335); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, MIPS32_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("MIPS32_package.vhd", 169, 320, false, false, false, true, false); // bP - Popup Trigger
+selectCodeEditor("MIPS32_package.vhd", 126, 402); // bP
+selectCodeEditor("MIPS32_package.vhd", 152, 273); // bP
+selectCodeEditor("MIPS32_package.vhd", 152, 273, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 370, 370); // bP
+selectCodeEditor("MIPS32_package.vhd", 671, 434); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MIPS32_package.vhd", 459, 447); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,898 MB. GUI used memory: 94 MB. Current time: 6/29/22, 4:30:07 PM EDT
+selectCodeEditor("MIPS32_package.vhd", 356, 119); // bP
+selectCodeEditor("MIPS32_package.vhd", 356, 119, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("MIPS32_package.vhd", 231, 120); // bP
+selectCodeEditor("MIPS32_package.vhd", 231, 120, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("MIPS32_package.vhd", 231, 120, false, false, false, true, false); // bP - Popup Trigger
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // ah
+selectCodeEditor("MIPS32_package.vhd", 390, 258); // bP
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "f_DisplayAluAction", true); // l
+selectCodeEditor("MIPS32_package.vhd", 694, 36); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MIPS32_package.vhd", 684, 161, false, false, false, true, false); // bP - Popup Trigger
+selectCodeEditor("MIPS32_package.vhd", 556, 277); // bP
+selectCodeEditor("MIPS32_package.vhd", 556, 277); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MIPS32_package.vhd" into library xil_defaultlib INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'controleur' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+// TclEventType: LAUNCH_SIM

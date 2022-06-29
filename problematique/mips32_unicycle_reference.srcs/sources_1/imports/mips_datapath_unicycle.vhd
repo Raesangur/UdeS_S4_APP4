@@ -24,7 +24,7 @@ Port (
 	clk 			: in std_ulogic;
 	reset 			: in std_ulogic;
 
-	i_alu_funct   	: in std_ulogic_vector(3 downto 0);
+	i_alu_funct   	: in std_ulogic_vector(4 downto 0);
 	i_RegWrite    	: in std_ulogic;
 	i_RegDst      	: in std_ulogic;
 	i_MemtoReg    	: in std_ulogic;
@@ -33,6 +33,7 @@ Port (
 	i_MemRead 		: in std_ulogic;
 	i_MemWrite	  	: in std_ulogic;
 	i_vect          : in std_ulogic;
+	i_CmpWrite      : in std_ulogic;
 
 	i_jump   	  	: in std_ulogic;
 	i_jump_register : in std_ulogic;
@@ -50,33 +51,33 @@ end mips_datapath_unicycle;
 architecture Behavioral of mips_datapath_unicycle is
 
 
-component MemInstructions is
-    Port ( i_addresse : in std_ulogic_vector (31 downto 0);
-           o_instruction : out std_ulogic_vector (31 downto 0));
-end component;
-
-component MemDonnees is
-Port ( 
-	clk         : in  std_ulogic;
-	reset       : in  std_ulogic;
-	i_MemRead 	: in  std_ulogic;
-	i_MemWrite  : in  std_ulogic;
-	i_vect      : in  std_ulogic;
-    i_Addresse  : in  std_ulogic_vector (31  downto 0);
-	i_WriteData : in  std_ulogic_vector (127 downto 0);
-    o_ReadData  : out std_ulogic_vector (127 downto 0)
-);
-end component;
+    component MemInstructions is
+        Port ( i_addresse : in std_ulogic_vector (31 downto 0);
+               o_instruction : out std_ulogic_vector (31 downto 0));
+    end component;
+    
+    component MemDonnees is
+    Port ( 
+        clk         : in  std_ulogic;
+        reset       : in  std_ulogic;
+        i_MemRead 	: in  std_ulogic;
+        i_MemWrite  : in  std_ulogic;
+        i_vect      : in  std_ulogic;
+        i_Addresse  : in  std_ulogic_vector (31  downto 0);
+        i_WriteData : in  std_ulogic_vector (127 downto 0);
+        o_ReadData  : out std_ulogic_vector (127 downto 0)
+    );
+    end component;
 
 	component BancRegistres is
 	Port ( 
-		clk : in std_ulogic;
-		reset : in std_ulogic;
-		i_RS1 : in std_ulogic_vector (4 downto 0);
-		i_RS2 : in std_ulogic_vector (4 downto 0);
-		i_Wr_DAT : in std_ulogic_vector (127 downto 0);
-		i_WDest : in std_ulogic_vector (4 downto 0);
-		i_WE : in std_ulogic;
+		clk       : in std_ulogic;
+		reset     : in std_ulogic;
+		i_RS1     : in std_ulogic_vector (4 downto 0);
+		i_RS2     : in std_ulogic_vector (4 downto 0);
+		i_Wr_DAT  : in std_ulogic_vector (127 downto 0);
+		i_WDest   : in std_ulogic_vector (4 downto 0);
+		i_WE      : in std_ulogic;
 		o_RS1_DAT : out std_ulogic_vector (127 downto 0);
 		o_RS2_DAT : out std_ulogic_vector (127 downto 0)
 		);
@@ -86,19 +87,16 @@ end component;
 	Port ( 
 		i_a			: in std_ulogic_vector (31 downto 0);
 		i_b			: in std_ulogic_vector (31 downto 0);
-		i_av        : in std_ulogic_vector (127 downto 0);
-		i_bv        : in std_ulogic_vector (127 downto 0);
-		i_alu_funct : in std_ulogic_vector (3 downto 0);
+		i_alu_funct : in std_ulogic_vector (4 downto 0);
 		i_shamt		: in std_ulogic_vector (4 downto 0);
 		o_result	: out std_ulogic_vector (31 downto 0);
-		o_resultv   : out std_ulogic_vector (127 downto 0);
 	    o_multRes   : out std_ulogic_vector (63 downto 0);
 		o_zero		: out std_ulogic
 		);
 	end component;
 
 	constant c_Registre31		 : std_ulogic_vector(4 downto 0) := "11111";
-	signal s_zero        : std_ulogic;
+	signal s_zero                : std_ulogic_vector(3 downto 0);
 	
     signal s_WriteRegDest_muxout   : std_ulogic_vector(4 downto 0);
 	
@@ -120,7 +118,7 @@ end component;
     signal s_jump_field            : std_ulogic_vector(25 downto 0);
     signal s_reg_data1             : std_ulogic_vector(127 downto 0);
     signal s_reg_data2             : std_ulogic_vector(127 downto 0);
-    signal s_AluResult             : std_ulogic_vector(31 downto 0);
+    signal s_AluResult             : std_ulogic_vector(127 downto 0);
     signal s_AluMultResult         : std_ulogic_vector(63 downto 0);
     
     signal s_Data2Reg_muxout       : std_ulogic_vector(127 downto 0);
@@ -180,7 +178,7 @@ s_adresse_branche				<= std_ulogic_vector(unsigned(s_imm_extended_shifted) + uns
 -- note, "i_jump_register" n'est pas dans les figures de COD5
 s_PC_Suivant		<= s_adresse_jump when i_jump = '1' else
                        s_reg_data1(31 downto 0) when i_jump_register = '1' else
-					   s_adresse_branche when (i_branch = '1' and s_zero = '1') else
+					   s_adresse_branche when (i_branch = '1' and s_zero(0) = '1') else
 					   s_adresse_PC_plus_4;
 					   
 
@@ -235,14 +233,44 @@ inst_Alu: alu
 port map( 
 	i_a         => s_reg_data1(31 downto 0),
 	i_b         => s_AluB_data,
-	i_av        => (others => '0'),
-	i_bv        => (others => '0'),
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
-	o_result    => s_AluResult,
-	o_resultv   => open,
+	o_result    => s_AluResult(31 downto 0),
 	o_multRes   => s_AluMultResult,
-	o_zero      => s_zero
+	o_zero      => s_zero(0)
+	);
+	
+inst_Alu2: alu 
+port map( 
+	i_a         => s_reg_data1(63 downto 32),
+	i_b         => s_reg_data2(63 downto 32),
+	i_alu_funct => i_alu_funct,
+	i_shamt     => s_shamt,
+	o_result    => s_AluResult(63 downto 32),
+	o_multRes   => open,
+	o_zero      => s_zero(1)
+	);
+	
+inst_Alu3: alu 
+port map( 
+	i_a         => s_reg_data1(95 downto 64),
+	i_b         => s_reg_data2(95 downto 64),
+	i_alu_funct => i_alu_funct,
+	i_shamt     => s_shamt,
+	o_result    => s_AluResult(95 downto 64),
+	o_multRes   => open,
+	o_zero      => s_zero(2)
+	);
+	
+inst_Alu4: alu 
+port map( 
+	i_a         => s_reg_data1(127 downto 96),
+	i_b         => s_reg_data2(127 downto 96),
+	i_alu_funct => i_alu_funct,
+	i_shamt     => s_shamt,
+	o_result    => s_AluResult(127 downto 96),
+	o_multRes   => open,
+	o_zero      => s_zero(3)
 	);
 
 ------------------------------------------------------------------------
@@ -255,7 +283,7 @@ Port map(
 	i_MemRead	               => i_MemRead,
 	i_MemWrite	               => i_MemWrite,
 	i_vect                     => i_vect,
-    i_Addresse	               => s_AluResult,
+    i_Addresse	               => s_AluResult(31 downto 0),
 	i_WriteData                => s_reg_data2,
 	--i_WriteData(127 downto 32) => (others => '0'),
     o_ReadData                 => s_MemoryReadData
@@ -282,8 +310,7 @@ begin
         s_Data2Reg_muxout(127 downto 32) <= (others => '0');
         
     elsif(i_MemtoReg = '0') then
-        s_Data2Reg_muxout(31 downto 0)   <= s_AluResult;
-        s_Data2Reg_muxout(127 downto 32) <= (others => '0');
+        s_Data2Reg_muxout <= s_AluResult;
         
     else
         s_Data2Reg_muxout <= s_MemoryReadData;

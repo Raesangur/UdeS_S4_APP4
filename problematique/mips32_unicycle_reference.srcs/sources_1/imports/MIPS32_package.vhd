@@ -19,21 +19,23 @@ use ieee.numeric_std.all;
 package MIPS32_package is
     -- codes d'operation internes de l'ALU
     -- Nous definissons ces codes et on aurait pu adopter un autre encodage
-    constant ALU_AND  : std_ulogic_vector( 3 downto 0 ) := "0000";
-    constant ALU_OR   : std_ulogic_vector( 3 downto 0 ) := "0001";
-    constant ALU_ADD  : std_ulogic_vector( 3 downto 0 ) := "0010";
-    constant ALU_SLTU : std_ulogic_vector( 3 downto 0 ) := "0011";
-    constant ALU_SUB  : std_ulogic_vector( 3 downto 0 ) := "0110";
-    constant ALU_SLT  : std_ulogic_vector( 3 downto 0 ) := "0111";
+    constant ALU_AND  : std_ulogic_vector( 4 downto 0 ) := "00000";
+    constant ALU_OR   : std_ulogic_vector( 4 downto 0 ) := "00001";
+    constant ALU_ADD  : std_ulogic_vector( 4 downto 0 ) := "00010";
+    constant ALU_SLTU : std_ulogic_vector( 4 downto 0 ) := "00011";
+    constant ALU_SUB  : std_ulogic_vector( 4 downto 0 ) := "00110";
+    constant ALU_SLT  : std_ulogic_vector( 4 downto 0 ) := "00111";
     
-    constant ALU_XOR  : std_ulogic_vector( 3 downto 0 ) := "1000";
-    constant ALU_NOR  : std_ulogic_vector( 3 downto 0 ) := "1001";
-    constant ALU_SLL  : std_ulogic_vector( 3 downto 0 ) := "1010";
-    constant ALU_SRL  : std_ulogic_vector( 3 downto 0 ) := "1011";
-    constant ALU_SRA  : std_ulogic_vector( 3 downto 0 ) := "1100";
-    constant ALU_MULTU: std_ulogic_vector( 3 downto 0 ) := "1101";
-    constant ALU_SLL16: std_ulogic_vector( 3 downto 0 ) := "1110";
-    constant ALU_NULL : std_ulogic_vector( 3 downto 0 ) := "1111";
+    constant ALU_XOR  : std_ulogic_vector( 4 downto 0 ) := "01000";
+    constant ALU_NOR  : std_ulogic_vector( 4 downto 0 ) := "01001";
+    constant ALU_SLL  : std_ulogic_vector( 4 downto 0 ) := "01010";
+    constant ALU_SRL  : std_ulogic_vector( 4 downto 0 ) := "01011";
+    constant ALU_SRA  : std_ulogic_vector( 4 downto 0 ) := "01100";
+    constant ALU_MULTU: std_ulogic_vector( 4 downto 0 ) := "01101";
+    constant ALU_SLL16: std_ulogic_vector( 4 downto 0 ) := "01110";
+    constant ALU_NULL : std_ulogic_vector( 4 downto 0 ) := "01111";
+    
+    constant ALU_CMPV : std_ulogic_vector( 4 downto 0 ) := "10000";
     
     -- codes du champ function des instructions de type R
     -- Ces codes sont definis par l'encodage des instructions MIPS
@@ -69,6 +71,8 @@ package MIPS32_package is
     constant OP_LWV   : std_ulogic_vector( 5 downto 0 ) := "011100";
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
     constant OP_SWV   : std_ulogic_vector( 5 downto 0 ) := "011101";
+    constant OP_CMPV  : std_ulogic_vector( 5 downto 0 ) := "011110";
+    constant OP_SWVC  : std_ulogic_vector( 5 downto 0 ) := "011111";
 	
 	
 	constant c_Mips32_Nop	 	: std_ulogic_vector(31 downto 0) := X"00000000";
@@ -109,6 +113,8 @@ package MIPS32_package is
 		sim_OP_LWV,
 		sim_OP_SW,
 		sim_OP_SWV,
+		sim_OP_SWVC,
+		sim_OP_CMPV,
 		sim_OP_SYSCALL,
         sim_OP_Undefined
     );
@@ -129,9 +135,10 @@ package MIPS32_package is
         sim_alu_SLTU,
         sim_alu_MULTU,
         sim_alu_NULL,
+        sim_alu_CMPV,
         sim_alu_Undefined
     );
-	function f_DisplayAluAction(alu_funct : std_ulogic_vector( 3 downto 0 )
+	function f_DisplayAluAction(alu_funct : std_ulogic_vector( 4 downto 0 )
                         ) return alu_action_types;			
 
 
@@ -216,6 +223,10 @@ begin
 			CurrentOp := sim_OP_SW;
 		when OP_SWV =>
 		    CurrentOp := sim_OP_SWV;
+		when OP_SWVC =>
+		    CurrentOp := sim_OP_SWVC;
+		when OP_CMPV =>
+		    CurrentOp := sim_OP_CMPV;
 		when others =>
 			CurrentOp := sim_OP_Undefined;
 	end case;
@@ -224,7 +235,7 @@ begin
 end function;
 
 
-function f_DisplayAluAction(alu_funct : std_ulogic_vector( 3 downto 0 )
+function f_DisplayAluAction(alu_funct : std_ulogic_vector( 4 downto 0 )
                         ) return alu_action_types is 
 	variable CurrentAction : alu_action_types;	
 begin
@@ -253,6 +264,8 @@ begin
 			CurrentAction := sim_alu_SLTU;
 		when ALU_MULTU =>
 			CurrentAction := sim_alu_MULTU;
+	    when ALU_CMPV =>
+	        CurrentAction := sim_alu_CMPV;
 		when ALU_NULL =>
 			CurrentAction := sim_alu_NULL;
 		when others =>

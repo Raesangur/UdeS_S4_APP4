@@ -24,9 +24,9 @@ Port (
 	reset 		: in std_ulogic;
 	i_MemRead 	: in std_ulogic;
 	i_MemWrite 	: in std_ulogic;
-	i_vect      : in std_ulogic;
-    i_Addresse 	: in std_ulogic_vector (31 downto 0);
-	i_WriteData : in std_ulogic_vector (127 downto 0);
+	i_Vect      : in std_ulogic;
+    i_Addresse 	: in std_ulogic_vector  (31 downto 0);
+	i_WriteData : in std_ulogic_vector  (127 downto 0);
     o_ReadData 	: out std_ulogic_vector (127 downto 0)
 );
 end MemDonnees;
@@ -61,7 +61,7 @@ begin
 	s_MemoryRangeValid <= '1' when i_Addresse(31 downto 10) = (X"10010" & "00") else '0'; 
 	
 	
-	-- Partie pour l'�criture
+	-- Partie pour l'ecriture
 	process( clk )
     begin
         if clk='1' and clk'event then
@@ -69,10 +69,10 @@ begin
                 if (i_vect = '0') then
                     ram_DataMemory(s_MemoryIndex) <= i_WriteData(31 downto 0);
                 else
-                    ram_DataMemory(s_MemoryIndex + 3) <= i_WriteData(31 downto 0);
-                    ram_DataMemory(s_MemoryIndex + 2) <= i_WriteData(63 downto 32);
-                    ram_DataMemory(s_MemoryIndex + 1) <= i_WriteData(95 downto 64);
-                    ram_DataMemory(s_MemoryIndex)     <= i_WriteData(127 downto 96);
+                    ram_DataMemory(s_MemoryIndex + 3) <= i_WriteData(31 downto 0) ; --  when i_CmpData(31 downto 0 )  = x"FFFF";
+                    ram_DataMemory(s_MemoryIndex + 2) <= i_WriteData(63 downto 32); --  when i_CmpData(63 downto 32)  = x"FFFF";
+                    ram_DataMemory(s_MemoryIndex + 1) <= i_WriteData(95 downto 64); --  when i_CmpData(95 downto 64)  = x"FFFF";
+                    ram_DataMemory(s_MemoryIndex)     <= i_WriteData(127 downto 96);--  when i_CmpData(127 downto 96) = x"FFFF";
                 end if;
             end if;
         end if;

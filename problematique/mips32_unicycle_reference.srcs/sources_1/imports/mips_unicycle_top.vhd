@@ -38,12 +38,13 @@ Port (
     o_RegDst    : out std_ulogic;
     o_Branch    : out std_ulogic;
     o_MemtoReg  : out std_ulogic;
-    o_AluFunct  : out std_ulogic_vector (3 downto 0);
+    o_AluFunct  : out std_ulogic_vector (4 downto 0);
     o_MemRead   : out std_ulogic;
     o_MemWrite  : out std_ulogic;
     o_vect      : out std_ulogic;
     o_ALUSrc    : out std_ulogic;
     o_RegWrite  : out std_ulogic;
+    o_CmpWrite  : out std_ulogic;
 	
 	-- Sorties supp. vs 4.17
     o_Jump : out std_ulogic;
@@ -61,7 +62,7 @@ Port (
 	clk 			: in std_ulogic;
 	reset 			: in std_ulogic;
 
-	i_alu_funct   	: in std_ulogic_vector(3 downto 0);
+	i_alu_funct   	: in std_ulogic_vector(4 downto 0);
 	i_RegWrite    	: in std_ulogic;
 	i_RegDst      	: in std_ulogic;
 	i_MemtoReg    	: in std_ulogic;
@@ -70,6 +71,7 @@ Port (
 	i_MemRead 		: in std_ulogic;
 	i_MemWrite	  	: in std_ulogic;
 	i_vect          : in std_ulogic;
+	i_CmpWrite      : in std_ulogic;
 
 	i_jump   	  	: in std_ulogic;
 	i_jump_register : in std_ulogic;
@@ -84,7 +86,7 @@ Port (
 );
 end component;
 
-    signal s_alu_funct      : std_ulogic_vector(3 downto 0);
+    signal s_alu_funct      : std_ulogic_vector(4 downto 0);
     signal s_RegWrite       : std_ulogic;
 	signal s_RegDst         : std_ulogic;
     signal s_MemtoReg       : std_ulogic;
@@ -93,6 +95,7 @@ end component;
 	signal s_MemRead	    : std_ulogic;
 	signal s_MemWrite	    : std_ulogic;
 	signal s_vect           : std_ulogic;
+	signal s_CmpWrite       : std_ulogic;
 	signal s_jump_register  : std_ulogic;
 	signal s_jump_link      : std_ulogic;
     signal s_jump           : std_ulogic;
@@ -124,6 +127,7 @@ Port map(
     o_vect          => s_vect,
     o_ALUSrc    	=> s_ALUSrc,
     o_RegWrite  	=> s_RegWrite,
+    o_CmpWrite      => s_CmpWrite,
 	
     o_Jump 			=> s_Jump,
 	o_jump_register => s_jump_register,
@@ -150,6 +154,7 @@ Port map(
 	i_MemRead 		=> s_MemRead,
 	i_MemWrite	  	=> s_MemWrite,
 	i_vect          => s_vect,
+	i_CmpWrite      => s_CmpWrite,
 	i_jump   	  	=> s_jump,
 	i_jump_register => s_jump_register,
 	i_jump_link   	=> s_jump_link,

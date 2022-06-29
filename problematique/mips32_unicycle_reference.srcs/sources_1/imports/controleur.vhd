@@ -25,12 +25,13 @@ Port (
     o_RegDst    	: out std_ulogic;
     o_Branch    	: out std_ulogic;
     o_MemtoReg  	: out std_ulogic;
-    o_AluFunct  	: out std_ulogic_vector (3 downto 0);
+    o_AluFunct  	: out std_ulogic_vector (4 downto 0);
     o_MemRead   	: out std_ulogic;
     o_MemWrite  	: out std_ulogic;
     o_vect          : out std_ulogic;
     o_ALUSrc    	: out std_ulogic;
     o_RegWrite  	: out std_ulogic;
+    o_CmpWrite      : out std_ulogic;
 	
 	-- Sorties supp. vs 4.17
     o_Jump 			: out std_ulogic;
@@ -45,7 +46,7 @@ end controleur;
 
 architecture Behavioral of controleur is
 
-    signal s_R_funct_decode   : std_ulogic_vector(3 downto 0);
+    signal s_R_funct_decode   : std_ulogic_vector(4 downto 0);
 
 begin
 
@@ -123,24 +124,29 @@ begin
 	
 	
 	o_RegWrite		<= '1' when i_Op = OP_Rtype or 
-								i_Op = OP_ADDI or 
+								i_Op = OP_ADDI  or 
 								i_Op = OP_ADDIU or 
-								i_Op = OP_ORI or 
-								i_Op = OP_LUI or 
-								i_Op = OP_LW or 
-								i_Op = OP_LWV or
-								i_Op = OP_JAL
-						else '0';
+								i_Op = OP_ORI   or 
+								i_Op = OP_LUI   or 
+								i_Op = OP_LW    or 
+								i_Op = OP_LWV   or
+								i_Op = OP_JAL   or
+								i_Op = OP_CMPV
+						        else '0';
 	
 	o_RegDst 		<= '1' when i_Op = OP_Rtype else '0';
 	
 	o_ALUSrc 		<= '0' when i_Op = OP_Rtype or i_Op = OP_BEQ else '1';
 	o_Branch 		<= '1' when i_Op = OP_BEQ   else '0';
 	o_MemRead 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
-	o_MemWrite 		<= '1' when i_Op = OP_SW    or i_Op = OP_SWV else '0';
+	o_MemWrite 		<= '1' when i_Op = OP_SW    or i_Op = OP_SWV
+	                        or  i_Op = OP_SWVC  else '0';
 	o_MemtoReg 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
-	o_vect          <= '1' when i_Op = OP_LWV   or i_OP = OP_SWV else '0';
+	o_vect          <= '1' when i_Op = OP_LWV   or i_OP = OP_SWV
+	                        or  i_Op = OP_SWVC  else '0';
 	o_SignExtend	<= '1' when i_OP = OP_ADDI  or i_OP = OP_BEQ else '0';
+	
+	o_CmpWrite      <= '1' when i_OP = OP_CMPV else '0';
 	
 	
 	o_Jump	 		<= '1' when i_Op = OP_J or i_Op = OP_JAL else '0';

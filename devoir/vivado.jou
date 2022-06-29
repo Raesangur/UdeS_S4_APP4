@@ -2,26 +2,17 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Jun 29 17:35:56 2022
-# Process ID: 32139
-# Current directory: /home/raesangur/github/UdeS_S4_APP4/problematique
+# Start of session at: Wed Jun 29 16:30:38 2022
+# Process ID: 25575
+# Current directory: /home/raesangur/github/UdeS_S4_APP4/devoir
 # Command line: vivado
-# Log file: /home/raesangur/github/UdeS_S4_APP4/problematique/vivado.log
-# Journal file: /home/raesangur/github/UdeS_S4_APP4/problematique/vivado.jou
+# Log file: /home/raesangur/github/UdeS_S4_APP4/devoir/vivado.log
+# Journal file: /home/raesangur/github/UdeS_S4_APP4/devoir/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.xpr
 launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-reset_run synth_1
-launch_simulation
-launch_simulation
 open_wave_config /home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg
 source mips_unicycle_tb.tcl
-restart
-run 200 ns
-run 200 ns
+close_sim
+launch_simulation
