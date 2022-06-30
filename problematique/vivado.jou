@@ -74,3 +74,9 @@ relaunch_sim
 restart
 run 300 ns
 save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+relaunch_sim
+restart
+run 300 ns
+restart
+run 300 ns
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}

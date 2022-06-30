@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="266040fs"></ZoomStartTime>
-      <ZoomEndTime time="284801fs"></ZoomEndTime>
-      <Cursor1Time time="281700fs"></Cursor1Time>
+      <ZoomStartTime time="221900fs"></ZoomStartTime>
+      <ZoomEndTime time="364601fs"></ZoomEndTime>
+      <Cursor1Time time="300000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="271"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="27" />
    <wvobject type="logic" fp_name="/mips_unicycle_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -39,6 +39,14 @@
    <wvobject type="logic" fp_name="/mips_unicycle_tb/dut/s_vect">
       <obj_property name="ElementShortName">s_vect</obj_property>
       <obj_property name="ObjectShortName">s_vect</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/mips_unicycle_tb/inst_monitor/show_Instruction">
+      <obj_property name="ElementShortName">show_Instruction</obj_property>
+      <obj_property name="ObjectShortName">show_Instruction</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/mips_unicycle_tb/inst_monitor/show_alu_action">
+      <obj_property name="ElementShortName">show_alu_action</obj_property>
+      <obj_property name="ObjectShortName">show_alu_action</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/o_Instruction">
       <obj_property name="ElementShortName">o_Instruction[31:0]</obj_property>
