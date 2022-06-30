@@ -1253,3 +1253,893 @@ Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
 run 200 ns
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7493.902 ; gain = 0.000 ; free physical = 8715 ; free virtual = 24250
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7518.793 ; gain = 0.000 ; free physical = 8712 ; free virtual = 24244
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7554.812 ; gain = 0.000 ; free physical = 8684 ; free virtual = 24216
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:]
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {400ns} -objects [get_filesets sim_1]
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controleur'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 7584.824 ; gain = 30.012 ; free physical = 8611 ; free virtual = 24163
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MIPS32_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controleur'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7587.828 ; gain = 0.000 ; free physical = 8151 ; free virtual = 23819
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 260 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemDonnees'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7679.867 ; gain = 0.000 ; free physical = 7908 ; free virtual = 23660
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7730.895 ; gain = 0.000 ; free physical = 7806 ; free virtual = 23563
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 400 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemInstructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 7778.918 ; gain = 32.016 ; free physical = 7729 ; free virtual = 23488
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controleur'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 7832.941 ; gain = 0.000 ; free physical = 7675 ; free virtual = 23436
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alu'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7832.941 ; gain = 0.000 ; free physical = 7666 ; free virtual = 23431
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {300ns} -objects [get_filesets sim_1]
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/MIPS32_package.vhd:]
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7837.949 ; gain = 0.000 ; free physical = 7644 ; free virtual = 23406
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mips_unicycle_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj mips_unicycle_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alu'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controleur'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mips_datapath_unicycle'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim'
+xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7877.969 ; gain = 0.000 ; free physical = 7555 ; free virtual = 23320
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu4/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu3/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu2/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_unicycle_tb/dut/inst_Datapath/inst_Alu/line__104  File: /home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}

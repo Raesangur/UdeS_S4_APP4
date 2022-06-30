@@ -23,3 +23,54 @@ relaunch_sim
 restart
 run 200 ns
 run 200 ns
+relaunch_sim
+run 200 ns
+restart
+run 400 ns
+relaunch_sim
+restart
+run 400 ns
+relaunch_sim
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {400ns} -objects [get_filesets sim_1]
+relaunch_sim
+restart
+run 400 ns
+restart
+run 400 ns
+restart
+run 400 ns
+relaunch_sim
+restart
+run 260 ns
+relaunch_sim
+restart
+run 400 ns
+relaunch_sim
+restart
+run 400 ns
+relaunch_sim
+restart
+run 300 ns
+restart
+run 300 ns
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+restart
+run 300 ns
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}
+relaunch_sim
+restart
+run 300 ns
+relaunch_sim
+restart
+set_property -name {xsim.simulate.runtime} -value {300ns} -objects [get_filesets sim_1]
+run 300 ns
+relaunch_sim
+restart
+run 300 ns
+restart
+run 300 ns
+relaunch_sim
+restart
+run 300 ns
+save_wave_config {/home/raesangur/github/UdeS_S4_APP4/problematique/mips_unicycle_tb_behav.wcfg}

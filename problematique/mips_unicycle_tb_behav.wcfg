@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="9879514fs"></ZoomStartTime>
-      <ZoomEndTime time="9882431fs"></ZoomEndTime>
-      <Cursor1Time time="9880000fs"></Cursor1Time>
+      <ZoomStartTime time="266040fs"></ZoomStartTime>
+      <ZoomEndTime time="284801fs"></ZoomEndTime>
+      <Cursor1Time time="281700fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="271"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="31" />
+   <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/mips_unicycle_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -36,10 +36,6 @@
       <obj_property name="ElementShortName">end_program</obj_property>
       <obj_property name="ObjectShortName">end_program</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/o_pc">
-      <obj_property name="ElementShortName">o_pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_pc[31:0]</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/mips_unicycle_tb/dut/s_vect">
       <obj_property name="ElementShortName">s_vect</obj_property>
       <obj_property name="ObjectShortName">s_vect</obj_property>
@@ -52,25 +48,25 @@
       <obj_property name="ElementShortName">i_Addresse[31:0]</obj_property>
       <obj_property name="ObjectShortName">i_Addresse[31:0]</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_MemDonnees/s_MemoryIndex">
-      <obj_property name="ElementShortName">s_MemoryIndex</obj_property>
-      <obj_property name="ObjectShortName">s_MemoryIndex</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_MemDonnees/s_MemoryRangeValid">
-      <obj_property name="ElementShortName">s_MemoryRangeValid</obj_property>
-      <obj_property name="ObjectShortName">s_MemoryRangeValid</obj_property>
+   <wvobject type="logic" fp_name="/mips_unicycle_tb/dut/inst_Datapath/i_ALUSrc">
+      <obj_property name="ElementShortName">i_ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">i_ALUSrc</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_Data2Reg_muxout">
       <obj_property name="ElementShortName">s_Data2Reg_muxout[127:0]</obj_property>
       <obj_property name="ObjectShortName">s_Data2Reg_muxout[127:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/i_RS1">
-      <obj_property name="ElementShortName">i_RS1[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RS1[4:0]</obj_property>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_RS">
+      <obj_property name="ElementShortName">s_RS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RS[4:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/i_RS2">
-      <obj_property name="ElementShortName">i_RS2[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RS2[4:0]</obj_property>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_RT">
+      <obj_property name="ElementShortName">s_RT[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RT[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_RD">
+      <obj_property name="ElementShortName">s_RD[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RD[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/o_RS1_DAT">
       <obj_property name="ElementShortName">o_RS1_DAT[127:0]</obj_property>
@@ -80,53 +76,37 @@
       <obj_property name="ElementShortName">o_RS2_DAT[127:0]</obj_property>
       <obj_property name="ObjectShortName">o_RS2_DAT[127:0]</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/int_i_RS1">
-      <obj_property name="ElementShortName">int_i_RS1</obj_property>
-      <obj_property name="ObjectShortName">int_i_RS1</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/int_i_RS2">
-      <obj_property name="ElementShortName">int_i_RS2</obj_property>
-      <obj_property name="ObjectShortName">int_i_RS2</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/int_i_WD">
-      <obj_property name="ElementShortName">int_i_WD</obj_property>
-      <obj_property name="ObjectShortName">int_i_WD</obj_property>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Alu/i_alu_funct">
+      <obj_property name="ElementShortName">i_alu_funct[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_alu_funct[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_reg_data1">
       <obj_property name="ElementShortName">s_reg_data1[127:0]</obj_property>
       <obj_property name="ObjectShortName">s_reg_data1[127:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_reg_data2">
+      <obj_property name="ElementShortName">s_reg_data2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_data2[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_AluResult_MOVNV">
+      <obj_property name="ElementShortName">s_AluResult_MOVNV[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_AluResult_MOVNV[127:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_AluB_data">
       <obj_property name="ElementShortName">s_AluB_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">s_AluB_data[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_imm16">
-      <obj_property name="ElementShortName">s_imm16[15:0]</obj_property>
-      <obj_property name="ObjectShortName">s_imm16[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_imm_extended">
-      <obj_property name="ElementShortName">s_imm_extended[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_imm_extended[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/i_alu_funct">
-      <obj_property name="ElementShortName">i_alu_funct[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_alu_funct[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Alu/i_b">
-      <obj_property name="ElementShortName">i_b[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_b[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Alu/i_a">
-      <obj_property name="ElementShortName">i_a[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_a[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/mips_unicycle_tb/dut/inst_Datapath/i_ALUSrc">
-      <obj_property name="ElementShortName">i_ALUSrc</obj_property>
-      <obj_property name="ObjectShortName">i_ALUSrc</obj_property>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_WriteRegDest_muxout">
+      <obj_property name="ElementShortName">s_WriteRegDest_muxout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_WriteRegDest_muxout[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Alu/o_result">
       <obj_property name="ElementShortName">o_result[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_reg_desti">
+      <obj_property name="ElementShortName">s_reg_desti[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_desti[127:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/regs">
       <obj_property name="ElementShortName">regs[0:23][31:0]</obj_property>
@@ -135,10 +115,7 @@
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_Registres/regsv">
       <obj_property name="ElementShortName">regsv[0:7][127:0]</obj_property>
       <obj_property name="ObjectShortName">regsv[0:7][127:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/s_MemoryReadData">
-      <obj_property name="ElementShortName">s_MemoryReadData[127:0]</obj_property>
-      <obj_property name="ObjectShortName">s_MemoryReadData[127:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/mips_unicycle_tb/dut/inst_Datapath/inst_MemDonnees/ram_DataMemory">
       <obj_property name="ElementShortName">ram_DataMemory[0:255][31:0]</obj_property>

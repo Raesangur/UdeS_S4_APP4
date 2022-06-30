@@ -34,7 +34,6 @@ package MIPS32_package is
     constant ALU_MULTU: std_ulogic_vector( 4 downto 0 ) := "01101";
     constant ALU_SLL16: std_ulogic_vector( 4 downto 0 ) := "01110";
     constant ALU_NULL : std_ulogic_vector( 4 downto 0 ) := "01111";
-    
     constant ALU_MOVNV : std_ulogic_vector( 4 downto 0 ) := "10000";
     
     -- codes du champ function des instructions de type R
@@ -71,7 +70,7 @@ package MIPS32_package is
     constant OP_LWV   : std_ulogic_vector( 5 downto 0 ) := "011100";
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
     constant OP_SWV   : std_ulogic_vector( 5 downto 0 ) := "011101";
-    constant OP_MOVNV  : std_ulogic_vector( 5 downto 0 ) := "011110";
+    constant OP_MOVNV : std_ulogic_vector( 5 downto 0 ) := "011110";
 	
 	
 	constant c_Mips32_Nop	 	: std_ulogic_vector(31 downto 0) := X"00000000";
