@@ -79,7 +79,8 @@ architecture Behavioral of mips_datapath_unicycle is
 		i_WDest   : in std_ulogic_vector (4 downto 0);
 		i_WE      : in std_ulogic;
 		o_RS1_DAT : out std_ulogic_vector (127 downto 0);
-		o_RS2_DAT : out std_ulogic_vector (127 downto 0)
+		o_RS2_DAT : out std_ulogic_vector (127 downto 0);
+		o_DES_DAT : out std_ulogic_vector (127 downto 0)
 		);
 	end component;
 
@@ -118,7 +119,9 @@ architecture Behavioral of mips_datapath_unicycle is
     signal s_jump_field            : std_ulogic_vector(25 downto 0);
     signal s_reg_data1             : std_ulogic_vector(127 downto 0);
     signal s_reg_data2             : std_ulogic_vector(127 downto 0);
+    signal s_reg_desti             : std_ulogic_vector(127 downto 0);
     signal s_AluResult             : std_ulogic_vector(127 downto 0);
+    signal s_AluResult_MOVNV       : std_ulogic_vector(127 downto 0);
     signal s_AluMultResult         : std_ulogic_vector(63 downto 0);
     
     signal s_Data2Reg_muxout       : std_ulogic_vector(127 downto 0);
@@ -215,7 +218,8 @@ port map (
 	--o_RS1_DAT(127 downto 32) => unused_rs,
 	o_RS1_DAT                => s_reg_data1,
 	--o_RS2_DAT(127 downto 32) => unused_rt,
-	o_RS2_DAT                => s_reg_data2
+	o_RS2_DAT                => s_reg_data2,
+	o_DES_DAT               => s_reg_desti
 	);
 	
 
@@ -226,7 +230,7 @@ port map (
 s_imm_extended <= std_ulogic_vector(resize(  signed(s_imm16),32)) when i_SignExtend = '1' else -- extension de signe � 32 bits
 				  std_ulogic_vector(resize(unsigned(s_imm16),32)); 
 
--- Mux pour imm�diats
+-- Mux pour immidiats
 s_AluB_data <= s_reg_data2(31 downto 0) when i_ALUSrc = '0' else s_imm_extended;
 
 inst_Alu: alu 
@@ -235,7 +239,7 @@ port map(
 	i_b         => s_AluB_data,
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
-	o_result    => s_AluResult(31 downto 0),
+	o_result    => s_AluResult_MOVNV(31 downto 0),
 	o_multRes   => s_AluMultResult,
 	o_zero      => s_zero(0)
 	);
@@ -246,7 +250,7 @@ port map(
 	i_b         => s_reg_data2(63 downto 32),
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
-	o_result    => s_AluResult(63 downto 32),
+	o_result    => s_AluResult_MOVNV(63 downto 32),
 	o_multRes   => open,
 	o_zero      => s_zero(1)
 	);
@@ -257,7 +261,7 @@ port map(
 	i_b         => s_reg_data2(95 downto 64),
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
-	o_result    => s_AluResult(95 downto 64),
+	o_result    => s_AluResult_MOVNV(95 downto 64),
 	o_multRes   => open,
 	o_zero      => s_zero(2)
 	);
@@ -268,10 +272,12 @@ port map(
 	i_b         => s_reg_data2(127 downto 96),
 	i_alu_funct => i_alu_funct,
 	i_shamt     => s_shamt,
-	o_result    => s_AluResult(127 downto 96),
+	o_result    => s_AluResult_MOVNV(127 downto 96),
 	o_multRes   => open,
 	o_zero      => s_zero(3)
 	);
+	
+
 
 ------------------------------------------------------------------------
 -- M�moire de donn�es
@@ -283,17 +289,49 @@ Port map(
 	i_MemRead	               => i_MemRead,
 	i_MemWrite	               => i_MemWrite,
 	i_vect                     => i_vect,
-    i_Addresse	               => s_AluResult(31 downto 0),
+    i_Addresse	               => s_AluResult_MOVNV(31 downto 0),
 	i_WriteData                => s_reg_data2,
 	--i_WriteData(127 downto 32) => (others => '0'),
     o_ReadData                 => s_MemoryReadData
     --o_ReadData(127 downto 32)  => unused_mem
 	);
-	
+
+------------------------------------------------------------------------
+-- Mux s_AluResult si movnv est fait dans la distination ou non
+------------------------------------------------------------------------	
+
+process(s_AluResult_MOVNV)
+begin
+    if (i_alu_funct = ALU_MOVNV) then
+        if(s_AluResult_MOVNV(31 downto 0) = x"00000000" and (i_alu_funct = ALU_MOVNV)) then
+            s_AluResult(31 downto 0) <= s_reg_desti(31 downto 0);
+        else
+            s_AluResult(31 downto 0) <= s_AluResult_MOVNV(31 downto 0);
+        end if;
+        if(s_AluResult_MOVNV(63 downto 32) = x"00000000" and (i_alu_funct = ALU_MOVNV)) then
+            s_AluResult(63 downto 32) <= s_reg_desti(63 downto 32);
+        else
+            s_AluResult(63 downto 32) <= s_AluResult_MOVNV(63 downto 32);
+        end if;
+        if(s_AluResult_MOVNV(95 downto 64) = x"00000000" and (i_alu_funct = ALU_MOVNV)) then
+            s_AluResult(95 downto 64) <= s_reg_desti(95 downto 64);
+        else
+            s_AluResult(95 downto 64) <= s_AluResult_MOVNV(95 downto 64);
+        end if;
+        if(s_AluResult_MOVNV(127 downto 96) = x"00000000" and (i_alu_funct = ALU_MOVNV)) then
+            s_AluResult(127 downto 96) <= s_reg_desti(127 downto 96);
+        else
+            s_AluResult(127 downto 96) <= s_AluResult_MOVNV(127 downto 96);
+        end if;
+    else        
+        s_AluResult <= s_AluResult_MOVNV;
+    end if;
+end process;	
 
 ------------------------------------------------------------------------
 -- Mux d'�criture vers le banc de registres
 ------------------------------------------------------------------------
+
 
 process(s_adresse_PC_plus_4, i_jump_link, r_HI, r_LO, i_mfhi, i_mflo, s_AluResult, i_MemtoReg, s_MemoryReadData)
 begin

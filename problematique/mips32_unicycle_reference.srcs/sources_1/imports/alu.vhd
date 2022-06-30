@@ -90,8 +90,8 @@ begin
             when ALU_NULL => 
 				s_result <= (others => '0');
 				
-			when ALU_CMPV =>
-			    s_result <= x"FFFFFFFF" when i_a = i_b else x"00000000";
+			when ALU_MOVNV =>
+			    s_result <= i_a when i_b /= x"00000000" else x"00000000";
 				
             when others =>
                 s_result      <= i_a and i_b;

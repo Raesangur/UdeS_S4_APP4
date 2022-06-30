@@ -26,7 +26,8 @@ entity BancRegistres is
            i_WDest   : in  std_ulogic_vector (4 downto 0);
            i_WE 	 : in  std_ulogic;
            o_RS1_DAT : out std_ulogic_vector (127 downto 0);
-           o_RS2_DAT : out std_ulogic_vector (127 downto 0));
+           o_RS2_DAT : out std_ulogic_vector (127 downto 0);
+           o_DES_DAT: out std_ulogic_vector (127 downto 0));
 end BancRegistres;
 
 
@@ -59,7 +60,22 @@ begin
             end if;
         end if;
     end process;
+    
+    -- donnees lié avec registre de distination
+    process(int_i_WD , regs, regsv)
+    begin
+        if (int_i_WD < 16) then
+            o_DES_DAT(31 downto 0)   <= regs(int_i_WD);
+            o_DES_DAT(127 downto 32) <= (others => '0');
+        elsif (int_i_WD > 23) then
+            o_DES_DAT(31 downto 0)   <= regs(int_i_WD - 8);
+            o_DES_DAT(127 downto 32) <= (others => '0');
+        else
+            o_DES_DAT <= regsv(int_i_WD - 16);
+        end if;
+    end process;
 
+    -- donnes lié avec registre source
     process(int_i_RS1, regs, regsv)
     begin
         if (int_i_RS1 < 16) then
@@ -73,6 +89,7 @@ begin
         end if;
     end process;
 
+    -- donnes lié avec registre target
     process(int_i_RS2, regs, regsv)
     begin
         if (int_i_RS2 < 16) then

@@ -131,7 +131,7 @@ begin
 								i_Op = OP_LW    or 
 								i_Op = OP_LWV   or
 								i_Op = OP_JAL   or
-								i_Op = OP_CMPV
+								i_Op = OP_MOVNV
 						        else '0';
 	
 	o_RegDst 		<= '1' when i_Op = OP_Rtype else '0';
@@ -139,14 +139,12 @@ begin
 	o_ALUSrc 		<= '0' when i_Op = OP_Rtype or i_Op = OP_BEQ else '1';
 	o_Branch 		<= '1' when i_Op = OP_BEQ   else '0';
 	o_MemRead 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
-	o_MemWrite 		<= '1' when i_Op = OP_SW    or i_Op = OP_SWV
-	                        or  i_Op = OP_SWVC  else '0';
+	o_MemWrite 		<= '1' when i_Op = OP_SW    or i_Op = OP_SWV else '0';
 	o_MemtoReg 		<= '1' when i_Op = OP_LW    or i_Op = OP_LWV else '0';
-	o_vect          <= '1' when i_Op = OP_LWV   or i_OP = OP_SWV
-	                        or  i_Op = OP_SWVC  else '0';
+	o_vect          <= '1' when i_Op = OP_LWV   or i_OP = OP_SWV else '0';
 	o_SignExtend	<= '1' when i_OP = OP_ADDI  or i_OP = OP_BEQ else '0';
 	
-	o_CmpWrite      <= '1' when i_OP = OP_CMPV else '0';
+	o_CmpWrite      <= '1' when i_OP = OP_MOVNV else '0';
 	
 	
 	o_Jump	 		<= '1' when i_Op = OP_J or i_Op = OP_JAL else '0';

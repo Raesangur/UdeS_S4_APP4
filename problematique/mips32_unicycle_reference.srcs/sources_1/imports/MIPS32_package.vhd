@@ -35,7 +35,7 @@ package MIPS32_package is
     constant ALU_SLL16: std_ulogic_vector( 4 downto 0 ) := "01110";
     constant ALU_NULL : std_ulogic_vector( 4 downto 0 ) := "01111";
     
-    constant ALU_CMPV : std_ulogic_vector( 4 downto 0 ) := "10000";
+    constant ALU_MOVNV : std_ulogic_vector( 4 downto 0 ) := "10000";
     
     -- codes du champ function des instructions de type R
     -- Ces codes sont definis par l'encodage des instructions MIPS
@@ -71,8 +71,7 @@ package MIPS32_package is
     constant OP_LWV   : std_ulogic_vector( 5 downto 0 ) := "011100";
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
     constant OP_SWV   : std_ulogic_vector( 5 downto 0 ) := "011101";
-    constant OP_CMPV  : std_ulogic_vector( 5 downto 0 ) := "011110";
-    constant OP_SWVC  : std_ulogic_vector( 5 downto 0 ) := "011111";
+    constant OP_MOVNV  : std_ulogic_vector( 5 downto 0 ) := "011110";
 	
 	
 	constant c_Mips32_Nop	 	: std_ulogic_vector(31 downto 0) := X"00000000";
@@ -113,8 +112,7 @@ package MIPS32_package is
 		sim_OP_LWV,
 		sim_OP_SW,
 		sim_OP_SWV,
-		sim_OP_SWVC,
-		sim_OP_CMPV,
+		sim_OP_MOVNV,
 		sim_OP_SYSCALL,
         sim_OP_Undefined
     );
@@ -135,7 +133,7 @@ package MIPS32_package is
         sim_alu_SLTU,
         sim_alu_MULTU,
         sim_alu_NULL,
-        sim_alu_CMPV,
+        sim_alu_MOVNV,
         sim_alu_Undefined
     );
 	function f_DisplayAluAction(alu_funct : std_ulogic_vector( 4 downto 0 )
@@ -223,10 +221,8 @@ begin
 			CurrentOp := sim_OP_SW;
 		when OP_SWV =>
 		    CurrentOp := sim_OP_SWV;
-		when OP_SWVC =>
-		    CurrentOp := sim_OP_SWVC;
-		when OP_CMPV =>
-		    CurrentOp := sim_OP_CMPV;
+		when OP_MOVNV =>
+		    CurrentOp := sim_OP_MOVNV;
 		when others =>
 			CurrentOp := sim_OP_Undefined;
 	end case;
@@ -264,8 +260,8 @@ begin
 			CurrentAction := sim_alu_SLTU;
 		when ALU_MULTU =>
 			CurrentAction := sim_alu_MULTU;
-	    when ALU_CMPV =>
-	        CurrentAction := sim_alu_CMPV;
+	    when ALU_MOVNV =>
+	        CurrentAction := sim_alu_MOVNV;
 		when ALU_NULL =>
 			CurrentAction := sim_alu_NULL;
 		when others =>
