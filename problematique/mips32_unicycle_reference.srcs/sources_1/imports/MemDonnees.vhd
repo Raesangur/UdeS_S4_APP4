@@ -37,29 +37,49 @@ architecture Behavioral of MemDonnees is
 -- Ins�rez vos donnees ici
 ------------------------
 --  TestMirroir_data
+
 X"00000000",
 X"00000000",
 X"00000000",
 X"00000000",
-X"00000001",
-X"00000002",
-X"00000003",
+X"00000000",
+X"00000000",
+X"00000000",
+X"00000000",
 X"00000004",
+X"00000003",
+X"00000003",
+X"00000002",
+X"00000000",
+X"00000003",
 X"00000005",
 X"00000004",
+X"00000004",
+X"00000003",
+X"00000003",
+X"00000002",
+X"00000002",
+X"00000005",
 X"00000003",
 X"00000002",
 
---X"12345678",
---X"87654321",
---X"bad0face",
+
+------------------------
+-- Plan de valid
+------------------------
+--X"00000000",
+--X"00000000",
+--X"00000000",
+--X"00000000",
 --X"00000001",
 --X"00000002",
 --X"00000003",
 --X"00000004",
 --X"00000005",
---X"00000006",
---X"5555cccc",
+--X"00000004",
+--X"00000003",
+--X"00000002",
+
 ------------------------
 -- Fin de votre code
 ------------------------
@@ -92,8 +112,10 @@ begin
     end process;
 
     -- Valider que nous sommes dans le segment de memoire, avec 256 addresses valides
-    o_ReadData(31 downto 0)   <= ram_DataMemory(s_MemoryIndex + 3) when (s_MemoryRangeValid = '1' and i_MemRead = '1')
-                                 else (others => '0');
+    o_ReadData(31 downto 0)   <= ram_DataMemory(s_MemoryIndex + 3) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
+                            else ram_DataMemory(s_MemoryIndex)     when (s_MemoryRangeValid = '1' and i_MeMRead = '1' and i_vect = '0')
+                            else (others => '0');
+                            
     o_ReadData(63 downto 32)  <= ram_DataMemory(s_MemoryIndex + 2) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
                                  else (others => '0');
     o_ReadData(95 downto 64)  <= ram_DataMemory(s_MemoryIndex + 1) when (s_MemoryRangeValid = '1' and i_MemRead = '1' and i_vect = '1')
