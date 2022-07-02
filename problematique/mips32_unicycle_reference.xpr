@@ -199,7 +199,7 @@
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/mips_unicycle_tb_behav.wcfg"/>
-        <Option Name="xsim.simulate.runtime" Val="1us"/>
+        <Option Name="xsim.simulate.runtime" Val="3.5us"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
