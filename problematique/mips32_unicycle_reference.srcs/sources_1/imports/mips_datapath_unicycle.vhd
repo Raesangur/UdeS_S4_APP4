@@ -136,10 +136,6 @@ architecture Behavioral of mips_datapath_unicycle is
     -- registres sp�ciaux pour la multiplication
     signal r_HI             : std_ulogic_vector(31 downto 0);
     signal r_LO             : std_ulogic_vector(31 downto 0);
-	
-    signal unused_rs  : std_logic_vector(95 downto 0);
-    signal unused_rt  : std_logic_vector(95 downto 0);
-    signal unused_mem : std_logic_vector(95 downto 0);
     
 begin
 
@@ -300,25 +296,32 @@ Port map(
 -- Mux s_AluResult si movnv est fait dans la distination ou non
 ------------------------------------------------------------------------	
 
-process(s_AluResult_MOVNV)
+process(s_AluResult_MOVNV, i_alu_funct)
 begin
     if (i_alu_funct = ALU_MOVNV) then
-        if(s_AluResult_MOVNV(31 downto 0) = x"00000000") then
+        if(s_AluResult_MOVNV(31 downto 0)  = x"00000000"  and
+                s_reg_data1 (31 downto 0) /= x"00000000") then
             s_AluResult(31 downto 0) <= s_reg_desti(31 downto 0);
         else
             s_AluResult(31 downto 0) <= s_AluResult_MOVNV(31 downto 0);
         end if;
-        if(s_AluResult_MOVNV(63 downto 32) = x"00000000") then
+        
+        if(s_AluResult_MOVNV(63 downto 32)  = x"00000000"  and
+                s_reg_data1 (63 downto 32) /= x"00000000") then
             s_AluResult(63 downto 32) <= s_reg_desti(63 downto 32);
         else
             s_AluResult(63 downto 32) <= s_AluResult_MOVNV(63 downto 32);
         end if;
-        if(s_AluResult_MOVNV(95 downto 64) = x"00000000") then
+        
+        if(s_AluResult_MOVNV(95 downto 64)  = x"00000000"  and
+                s_reg_data1 (95 downto 64) /= x"00000000") then
             s_AluResult(95 downto 64) <= s_reg_desti(95 downto 64);
         else
             s_AluResult(95 downto 64) <= s_AluResult_MOVNV(95 downto 64);
         end if;
-        if(s_AluResult_MOVNV(127 downto 96) = x"00000000") then
+        
+        if(s_AluResult_MOVNV(127 downto 96)  = x"00000000"  and
+                s_reg_data1 (127 downto 96) /= x"00000000") then
             s_AluResult(127 downto 96) <= s_reg_desti(127 downto 96);
         else
             s_AluResult(127 downto 96) <= s_AluResult_MOVNV(127 downto 96);
@@ -328,12 +331,13 @@ begin
     end if;
 end process;	
 
+
 ------------------------------------------------------------------------
 -- Mux d'�criture vers le banc de registres
 ------------------------------------------------------------------------
 
 
-process(s_adresse_PC_plus_4, i_jump_link, r_HI, r_LO, i_mfhi, i_mflo, s_AluResult, i_MemtoReg, s_MemoryReadData)
+process(s_adresse_PC_plus_4, i_jump_link, r_HI, r_LO, i_mfhi, i_mflo, s_AluResult, i_MemtoReg, s_MemoryReadData, s_opcode)
 begin
     if (i_jump_link = '1') then
         s_Data2Reg_muxout(31 downto 0)   <= s_adresse_PC_plus_4;
@@ -350,6 +354,28 @@ begin
     elsif(i_MemtoReg = '0') then
         s_Data2Reg_muxout <= s_AluResult;
         
+    elsif(s_opcode = OP_SML) then
+        s_data2Reg_muxout <= s_reg_data1(31 downto 0) when (
+                                                      s_reg_data1(31 downto 0) < s_reg_data1(63 downto 32) and
+                                                      s_reg_data1(31 downto 0) < s_reg_data1(95 downto 64) and
+                                                      s_reg_data1(31 downto 0) < s_reg_data1(127 downto 96))
+                                                      else
+                             s_reg_data1(63 downto 0) when (
+                                                      s_reg_data1(63 downto 32) < s_reg_data1(31 downto 0)  and
+                                                      s_reg_data1(63 downto 32) < s_reg_data1(95 downto 64) and
+                                                      s_reg_data1(63 downto 32) < s_reg_data1(127 downto 96))
+                                                      else
+                             s_reg_data1(95 downto 64) when (
+                                                      s_reg_data1(95 downto 64) < s_reg_data1(31 downto 0)  and 
+                                                      s_reg_data1(95 downto 64) < s_reg_data1(63 downto 32) and 
+                                                      s_reg_data1(95 downto 64) < s_reg_data1(127 downto 96))
+                                                      else
+                             s_reg_data1(127 downto 96) when (
+                                                      s_reg_data1(127 downto 96) < s_reg_data1(31 downto 0)  and
+                                                      s_reg_data1(127 downto 96) < s_reg_data1(63 downto 32) and
+                                                      s_reg_data1(127 downto 96) < s_reg_data1(95 downto 64))
+                                                      else s_reg_data1(31 downto 0);                                                      
+                                                      
     else
         s_Data2Reg_muxout <= s_MemoryReadData;
     end if;

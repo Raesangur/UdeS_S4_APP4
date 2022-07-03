@@ -81,6 +81,8 @@ begin
 			    o_AluFunct <= ALU_ADD;
 			when OP_MOVNV =>
 			    o_AluFunct <= ALU_MOVNV;
+			when OP_SML =>
+			    o_AluFunct <= ALU_ADD;
             -- when OP_??? =>   -- autres cas?
 			-- sinon
             when others =>

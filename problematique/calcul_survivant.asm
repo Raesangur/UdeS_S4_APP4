@@ -1,8 +1,8 @@
 .data 0x10010000
 si:   .word   0, 0, 0, 0
-so:   .word   0xfa, 0xfa, 0xfa, 0xfa
+so:   .word   0, 0, 0, 0
 met:  .word   4, 0, 4, 2,   3, 3, 3, 5,   3, 5, 3, 3,   2, 4, 2, 2
-
+init: .word   0xfa, 0xfa, 0xfa, 0xfa
 
 
 
@@ -19,7 +19,6 @@ main:
 
     jal     CalculSurvivant             # CalculSurvivant(met, si, so)
 
-    # exit(1)
     li      $v0     10
     syscall 
 
@@ -45,7 +44,7 @@ acs_loop:
 
 acs_eol:
     addiu   $a0     $a0     16          # update address of met[i]
-    addiu   $a1     $a1     16          # update address of sInput[i]
+    #addiu   $a1     $a1     16          # update address of sInput[i]
     addiu   $t1     $t1     1           # i++
     j       acs_loop
 
@@ -54,8 +53,12 @@ acs_end:
     
 
 CalculSurvivant:
+    la      $t0     init
+    lw      $s0     0($t0)
+    sw      $s0     0($a2)		#so = [250, 250, 250, 250]
+
     # push $t0 & $t1 + $ra on stack
-    subi    $sp     $sp     4            # allocate space on the stack for 1 32-bits variable
+    subi    $sp     $sp     4           # allocate space on the stack for 1 32-bits variable
     sw      $ra     0($sp)
 
     # push arguments

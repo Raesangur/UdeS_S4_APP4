@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------
 --
---	Universit� de Sherbrooke 
---  D�partement de g�nie �lectrique et g�nie informatique
+--	Universite de Sherbrooke 
+--  Departement de genie electrique et genie informatique
 --
 --	S4i - APP4 
 --	
 --
---	Auteur: 		Marc-Andr� T�trault
+--	Auteur: 		Marc-Andre Tetrault
 --					Daniel Dalle
---					S�bastien Roy
+--					Sebastien Roy
 -- 
 ---------------------------------------------------------------------------------------------
 
@@ -32,20 +32,19 @@ Port (
 end MemDonnees;
 
 architecture Behavioral of MemDonnees is
-    signal ram_DataMemory : RAM(0 to 255) := ( -- type d�fini dans le package
+    signal ram_DataMemory : RAM(0 to 255) := ( -- type defini dans le package
 ------------------------
--- Ins�rez vos donnees ici
+-- Inserez vos donnees ici
 ------------------------
---  TestMirroir_data
 
 X"00000000",
 X"00000000",
 X"00000000",
 X"00000000",
-X"000000fa",
-X"000000fa",
-X"000000fa",
-X"000000fa",
+X"00000000",
+X"00000000",
+X"00000000",
+X"00000000",
 X"00000004",
 X"00000000",
 X"00000004",
@@ -62,6 +61,10 @@ X"00000002",
 X"00000004",
 X"00000002",
 X"00000002",
+X"000000fa",
+X"000000fa",
+X"000000fa",
+X"000000fa",
 
 ------------------------
 -- Plan de valid

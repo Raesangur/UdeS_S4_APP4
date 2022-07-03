@@ -19,21 +19,20 @@ use ieee.numeric_std.all;
 package MIPS32_package is
     -- codes d'operation internes de l'ALU
     -- Nous definissons ces codes et on aurait pu adopter un autre encodage
-    constant ALU_AND  : std_ulogic_vector( 4 downto 0 ) := "00000";
-    constant ALU_OR   : std_ulogic_vector( 4 downto 0 ) := "00001";
-    constant ALU_ADD  : std_ulogic_vector( 4 downto 0 ) := "00010";
-    constant ALU_SLTU : std_ulogic_vector( 4 downto 0 ) := "00011";
-    constant ALU_SUB  : std_ulogic_vector( 4 downto 0 ) := "00110";
-    constant ALU_SLT  : std_ulogic_vector( 4 downto 0 ) := "00111";
-    
-    constant ALU_XOR  : std_ulogic_vector( 4 downto 0 ) := "01000";
-    constant ALU_NOR  : std_ulogic_vector( 4 downto 0 ) := "01001";
-    constant ALU_SLL  : std_ulogic_vector( 4 downto 0 ) := "01010";
-    constant ALU_SRL  : std_ulogic_vector( 4 downto 0 ) := "01011";
-    constant ALU_SRA  : std_ulogic_vector( 4 downto 0 ) := "01100";
-    constant ALU_MULTU: std_ulogic_vector( 4 downto 0 ) := "01101";
-    constant ALU_SLL16: std_ulogic_vector( 4 downto 0 ) := "01110";
-    constant ALU_NULL : std_ulogic_vector( 4 downto 0 ) := "01111";
+    constant ALU_AND   : std_ulogic_vector( 4 downto 0 ) := "00000";
+    constant ALU_OR    : std_ulogic_vector( 4 downto 0 ) := "00001";
+    constant ALU_ADD   : std_ulogic_vector( 4 downto 0 ) := "00010";
+    constant ALU_SLTU  : std_ulogic_vector( 4 downto 0 ) := "00011";
+    constant ALU_SUB   : std_ulogic_vector( 4 downto 0 ) := "00110";
+    constant ALU_SLT   : std_ulogic_vector( 4 downto 0 ) := "00111";
+    constant ALU_XOR   : std_ulogic_vector( 4 downto 0 ) := "01000";
+    constant ALU_NOR   : std_ulogic_vector( 4 downto 0 ) := "01001";
+    constant ALU_SLL   : std_ulogic_vector( 4 downto 0 ) := "01010";
+    constant ALU_SRL   : std_ulogic_vector( 4 downto 0 ) := "01011";
+    constant ALU_SRA   : std_ulogic_vector( 4 downto 0 ) := "01100";
+    constant ALU_MULTU : std_ulogic_vector( 4 downto 0 ) := "01101";
+    constant ALU_SLL16 : std_ulogic_vector( 4 downto 0 ) := "01110";
+    constant ALU_NULL  : std_ulogic_vector( 4 downto 0 ) := "01111";
     constant ALU_MOVNV : std_ulogic_vector( 4 downto 0 ) := "10000";
     
     -- codes du champ function des instructions de type R
@@ -71,6 +70,7 @@ package MIPS32_package is
     constant OP_SW    : std_ulogic_vector( 5 downto 0 ) := "101011";
     constant OP_SWV   : std_ulogic_vector( 5 downto 0 ) := "011101";
     constant OP_MOVNV : std_ulogic_vector( 5 downto 0 ) := "011110";
+    constant OP_SML   : std_ulogic_vector( 5 downto 0 ) := "011111";
 	
 	
 	constant c_Mips32_Nop	 	: std_ulogic_vector(31 downto 0) := X"00000000";
@@ -112,6 +112,7 @@ package MIPS32_package is
 		sim_OP_SW,
 		sim_OP_SWV,
 		sim_OP_MOVNV,
+		sim_OP_SML,
 		sim_OP_SYSCALL,
         sim_OP_Undefined
     );
@@ -222,6 +223,8 @@ begin
 		    CurrentOp := sim_OP_SWV;
 		when OP_MOVNV =>
 		    CurrentOp := sim_OP_MOVNV;
+		when OP_SML =>
+		    CurrentOp := sim_OP_SML;
 		when others =>
 			CurrentOp := sim_OP_Undefined;
 	end case;
