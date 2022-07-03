@@ -1,7 +1,6 @@
 .data 0x10010000
 si:   .word   0, 0, 0, 0
 so:   .word   0xfa, 0xfa, 0xfa, 0xfa
-#met:  .word   4, 3, 3, 2,   0, 3, 5, 4,   4, 3, 3, 2,   2, 5, 3, 2   # valeurs trouvees en executant le programme initial
 met:  .word   4, 0, 4, 2,   3, 3, 3, 5,   3, 5, 3, 3,   2, 4, 2, 2
 
 
