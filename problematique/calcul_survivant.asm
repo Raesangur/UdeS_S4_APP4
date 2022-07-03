@@ -1,16 +1,15 @@
 .data 0x10010000
-si:   .word   0, 0, 0, 0
+si:   .word   2, 0, 2, 2
 so:   .word   0, 0, 0, 0
-met:  .word   4, 0, 4, 2,   3, 3, 3, 5,   3, 5, 3, 3,   2, 4, 2, 2
+met:  .word   4, 3, 3, 2,   0, 3, 5, 4,   4, 3, 3, 2,   2, 5, 3, 2 
 init: .word   0xfa, 0xfa, 0xfa, 0xfa
-
-
 
 .text
 .globl main
 
 main:  
     # Avec la metrique initiale, le programme devrait retourner en sortie les valeurs 2, 0, 2, 2
+    # Avec 2, 0, 2, 2 en entree, le programme devrait retourner en sortie les valeurs 3, 2, 3, 4
 
     # Chargement des params pour appel de fonction
     la      $a0     met
@@ -21,36 +20,6 @@ main:
 
     li      $v0     10
     syscall 
-
-
-acs:
-    li      $t0     4                   # uint32_t N = 4
-    li      $t1     0                   # uint32_t i = 0
-
-acs_loop:
-    bgeu    $t1     $t0     acs_end     # for i < N
-
-    lw      $s0     0($a0)              # get value of met[i]
-    lw      $s1     0($a1)              # get value of sInput[i]
-
-    addu    $s0     $s0     $s1         # temp = met[i] + sInput[i]
-
-    lw      $s2     0($a2)              # t3 = *sOutput
-
-    slt     $s1     $s0     $s2         # mask (1 when $s0 < $s2)
-    movn    $s2     $s0     $s1         # overwrite masked values of $s2 with values from $s0
-    sw      $s2     0($a2)              # sOutput = overwritten values
-
-
-acs_eol:
-    addiu   $a0     $a0     16          # update address of met[i]
-    #addiu   $a1     $a1     16          # update address of sInput[i]
-    addiu   $t1     $t1     1           # i++
-    j       acs_loop
-
-acs_end:
-    jr      $ra
-    
 
 CalculSurvivant:
     la      $t0     init
@@ -70,4 +39,35 @@ CalculSurvivant:
 
     # return
     jr      $ra
+
+
+acs:
+    li      $t0     4                   # uint32_t N = 4
+    li      $t1     0                   # uint32_t i = 0
+    
+    lw      $s1     0($a1)              # get value of sInput
+
+acs_loop:
+    bgeu    $t1     $t0     acs_end     # for i < N
+
+    lw      $s0     0($a0)              # get value of met[i]
+    addu    $s0     $s0     $s1         # temp = met[i] + sInput[i]
+
+    lw      $t2     0($s0)              # lw à remplacer par le opcode du sml : 
+    #sml     $t2     $s0                 # new instruction: extracts smallest value from vector
+
+    sw      $t2     0($a2)              # sOutput = overwritten values
+
+
+acs_eol:
+    addiu   $a0     $a0     16          # update address of met[i]
+    addiu   $a2     $a2     4
+    addiu   $t1     $t1     1           # i++
+    j       acs_loop
+
+acs_end:
+    jr      $ra
+
+
+
 

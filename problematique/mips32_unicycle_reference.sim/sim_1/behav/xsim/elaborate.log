@@ -2,6 +2,24 @@ Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
 Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 19cce0a531df40cda0f8ee2727a22117 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot mips_unicycle_tb_behav xil_defaultlib.mips_unicycle_tb -log elaborate.log 
 Using 8 slave threads.
-ERROR: [VRFC 10-3006] '/home/raesangur/github/UdeS_S4_APP4/problematique/mips32_unicycle_reference.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/mips_unicycle_tb.vdb' needs to be re-saved since 'xil_defaultlib.mips32_package' changed
-ERROR: [VRFC 10-3032] 'xil_defaultlib.mips_unicycle_tb' failed to restore
-ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.mips_unicycle_tb in library work located at xsim.dir/work.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mips32_package
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.controleur [controleur_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemInstructions [meminstructions_default]
+Compiling architecture comport of entity xil_defaultlib.BancRegistres [bancregistres_default]
+Compiling architecture comport of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.MemDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_datapath_unicycle [mips_datapath_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_top [mips_unicycle_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.monitor_unicycle [monitor_unicycle_default]
+Compiling architecture behavioral of entity xil_defaultlib.mips_unicycle_tb
+Built simulation snapshot mips_unicycle_tb_behav
