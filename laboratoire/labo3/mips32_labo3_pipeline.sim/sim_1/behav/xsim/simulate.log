@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /mips_pipeline_tb/dut/inst_Datapath/inst_Alu/line__83  File: /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.srcs/sources_1/imports/alu.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 10 ns  Iteration: 3  Process: /mips_pipeline_tb/dut/inst_Datapath/inst_Alu/line__83  File: /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.srcs/sources_1/imports/alu.vhd

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jul  3 13:58:10 2022
+# Process ID: 11168
+# Current directory: /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.sim/sim_1/behav/xsim/xsim.dir/mips_pipeline_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/raesangur/github/UdeS_S4_APP4/laboratoire/labo3/mips32_labo3_pipeline.sim/sim_1/behav/xsim/xsim.dir/mips_pipeline_tb_behav/webtalk/xsim_webtalk.tcl -notrace
